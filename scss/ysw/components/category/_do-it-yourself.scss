@@ -1,0 +1,201 @@
+.ysw-l-wanna-do-it {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: remCalc(570px);
+    padding: remCalc(32px) 5% 0;
+
+    .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        max-width: remCalc(1260px);
+        padding: 0 0 remCalc(85px);
+        text-align: center;
+
+        @include ysw-breakpoint("b-large") {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-self: start;
+            text-align: left;
+        }
+
+        [data-content-region="automotive-product-section-3-right"] {
+            @include ysw-breakpoint("b-large") {
+                margin-left: 0;
+            }
+
+            @include ysw-breakpoint("mobile") {
+                margin-left: remCalc(60px);
+            }
+
+            @include ysw-breakpoint("c-mobile") {
+                margin-left: remCalc(95px);
+            }
+        }
+    }
+
+    &__title {
+        color: $ysw-white-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(30px);
+        font-weight: 800;
+        margin-left: 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+
+        @include ysw-breakpoint("small") {
+            font-size: remCalc(40px);
+        }
+
+        @include ysw-breakpoint("b-medium") {
+            font-size: remCalc(44px);
+        }
+
+        @include ysw-breakpoint("b-large") {
+            margin-bottom: remCalc(65px);
+        }
+    }
+}
+
+.ysw-c-wanna-do-it {
+    max-width: remCalc(430px);
+    width: 100%;
+
+    &__title {
+        color: $ysw-white-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(26px);
+        font-weight: 800;
+        margin-bottom: remCalc(15px);
+        text-transform: inherit;
+    }
+
+    &__text-1 {
+        color: $ysw-white-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(16px);
+        font-weight: 300;
+        margin-bottom: remCalc(15px);
+    }
+
+    &__text-2 {
+        color: $ysw-white-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(16px);
+        font-weight: 700;
+        margin-bottom: remCalc(45px);
+    }
+
+    &__dropdown {
+        background-color: $ysw-grey-color--lightest;
+        border-bottom: remCalc(5px) solid $ysw-grey-color--lightest;
+        cursor: pointer;
+        display: flex;
+        height: remCalc(55px);
+        justify-content: flex-start;
+        list-style: none;
+        margin: 0 auto;
+        max-width: remCalc(413px);
+        position: relative;
+        text-align: left;
+        width: 100%;
+
+        @include ysw-breakpoint("b-large") {
+            margin-left: 0;
+        }
+
+        &:hover,
+        &:focus {
+            .ysw-c-wanna-do-it__dropdown-item {
+                display: block;
+            }
+        }
+
+        &-arrow {
+            align-items: center;
+            background-color: $ysw-grey-color--lightest;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            width: remCalc(60px);
+            z-index: 1;
+
+            &::before {
+                color: $ysw-blue-color;
+                content: "\203A";
+                font-size: remCalc(50px);
+                line-height: 0;
+                transform: rotate(90deg);
+            }
+        }
+
+        &-list {
+            background-color: $ysw-black-color;
+            display: block;
+            margin: 0;
+            max-width: remCalc(413px);
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &-item {
+            background-color: $ysw-white-color;
+            border: remCalc(5px) solid $ysw-grey-color--lightest;
+            border-bottom: 0;
+            display: none;
+            line-height: 1;
+
+            &:first-of-type {
+                display: block;
+            }
+
+            &:last-of-type {
+                border-bottom: remCalc(5px) solid $ysw-grey-color--lightest;
+            }
+
+            &:hover,
+            &:focus {
+                opacity: 0.9;
+                transition: opacity 0.2s ease;
+            }
+
+            a {
+                color: $ysw-blue-color--darker;
+                display: block;
+                font-family: $ysw-body-font;
+                font-size: remCalc(16px);
+                font-style: normal;
+                font-weight: 500;
+                letter-spacing: normal;
+                letter-spacing: remCalc(-0.36px);
+                line-height: normal;
+                overflow: hidden;
+                padding: remCalc(10px 16px);
+                text-decoration: none;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                @include ysw-breakpoint("small") {
+                    font-size: remCalc(18px);
+                }
+
+                &:first-of-type {
+                    width: 85%;
+                }
+            }
+        }
+    }
+}
+
+[data-layout-name="i-want-to-do-it-left"] {
+    z-index: 15 !important; // Overwrite BG styles and make sure that the dropdown overlaps.
+}
+
+[data-layout-name="i-want-to-do-it-right"] {
+    z-index: 14 !important; // Overwrite BG styles and make sure that the dropdown overlaps.
+}

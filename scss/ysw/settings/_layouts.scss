@@ -1,0 +1,40 @@
+// Layouts
+// --------------------------------
+
+
+// Breakpoints
+// --------------------------------
+// Desktop Devices: huge, b-xxlarge, b-xlarge, large
+// Mobile Devices: b-large, b-medium, medium, mobile
+// Handheld Devices: b-small, small, handheld
+
+$breakpoint-subtract: 0.02px;
+
+$ysw-breakpoints: (
+    // Stencil Screens
+    "small": $screen-small,
+    "medium": $screen-medium,
+    "large": $screen-large,
+    // Bootstrap Screens
+    "b-small": 577px,
+    "b-medium": 768px,
+    "b-large": 992px,
+    "b-xlarge": 1200px,
+    "b-xxlarge": 1400px,
+    // Custom Screens
+    "handheld": 480px,
+    "mobile": 1024px,
+    "huge": 1600px,
+    "c-handheld": 450px,
+    "600": 600px,
+    "c-medium": 796px,
+    "s-mobile": 900px,
+    "c-mobile": 1124px,
+    "c-large": 980px,
+    "c-small": 380px,
+    "c-huge": 1500px,
+    "c-xlarge": 1250px,
+    "product-view": 1001px,
+    "product-view-large": 1324px,
+    "icon-descriptors": 960px
+) !default;

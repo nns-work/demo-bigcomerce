@@ -1,0 +1,64 @@
+.productView--celluzorbe,
+.productView--generic-calculator {
+    .productView-price {
+        .price {
+            @include ysw-breakpoint-between("product-view", "c-xlarge") {
+                align-items: center;
+                display: grid;
+                min-height: remCalc(66px);
+            }
+
+            &::after {
+                color: $ysw-color-price-was;
+                content: "$";
+                font-family: "Montserrat";
+                font-size: remCalc(16px);
+                left: remCalc(5px);
+                position: absolute;
+                top: 0;
+            }
+
+            &::before {
+                background: $ysw-white-color;
+                bottom: 0;
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: remCalc(16px);
+            }
+
+            &--withoutTax {
+                &::before,
+                &::after {
+                    content: none;
+                }
+            }
+        }
+
+        .ysw-js-price {
+            align-items: center;
+            display: flex;
+            font-size: remCalc(22px);
+
+            @include ysw-breakpoint-between("product-view", "c-xlarge") {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            &__before {
+                color: $ysw-color-price-was;
+                font-size: remCalc(20px);
+                margin-right: remCalc(15px);
+                position: relative;
+                text-decoration: line-through;
+            }
+
+            &__now {
+                color: $ysw-text-link-color;
+                font-size: remCalc(24px);
+            }
+        }
+    }
+}

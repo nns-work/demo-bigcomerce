@@ -1,0 +1,5 @@
+body {
+    &.pace-running {
+        padding: 0 !important; // <--- This is the line that fix the problem with the header layout
+    }
+}

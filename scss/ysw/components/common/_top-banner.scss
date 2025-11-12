@@ -1,0 +1,80 @@
+.ysw-c-top-banner {
+    background-color: $ysw-color-top-banner-background;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: remCalc(10px) 3%;
+
+    @include ysw-breakpoint("c-medium") {
+        padding: remCalc(10px) 5%;
+    }
+
+    &__list {
+        column-gap: remCalc(30px);
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0 auto;
+
+        @include ysw-breakpoint-down("c-medium") {
+            justify-content: center;
+        }
+
+        @include ysw-breakpoint-down("b-xlarge") {
+            justify-content: space-evenly;
+        }
+
+        &-item {
+            color: $ysw-color-top-banner-color;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(14px);
+            font-weight: 700;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            @include ysw-breakpoint-down("c-huge") {
+                font-size: remCalc(12px);
+            }
+
+            @include ysw-breakpoint-down("s-mobile") {
+                font-size: remCalc(14px);
+                text-align: center;
+
+                &:nth-of-type(2) {
+                    display: none;
+                }
+            }
+
+            @include ysw-breakpoint-down("b-xlarge") {
+                &:last-of-type {
+                    display: none;
+                }
+            }
+
+            span {
+                &::before {
+                    content: "•";
+                    margin: 0 remCalc(5px);
+                }
+
+                &:first-of-type {
+                    &::before {
+                        content: none;
+                    }
+                }
+
+                &:last-of-type {
+                    @include ysw-breakpoint-down("small") {
+                        display: block;
+                    }
+
+                    &::before {
+                        @include ysw-breakpoint-down("small") {
+                            content: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

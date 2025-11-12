@@ -1,0 +1,224 @@
+.optimizedCheckout-buttonPrimary {
+    background-color: #0277bd;
+    border-color: #0277bd;
+
+    &:hover,
+    &:focus {
+        background-color: #01629e;
+        border-color: #01629e;
+    }
+}
+
+.modal-background {
+    background: rgba(51, 51, 51, 0.95);
+
+    &--open {
+        opacity: 1;
+    }
+}
+
+
+.ysw-c-discount-modal {
+    border: 8px solid #dadce0;
+    border-radius: 30px;
+    left: 50%;
+    margin: 0;
+    max-height: 90%;
+    max-width: 750px;
+    min-height: 240px;
+    padding: 30px 20px;
+    transform: translate(-50%, -50%);
+    width: 90%;
+
+    &.modal--open {
+        display: block;
+        opacity: 1;
+        top: 50%;
+        visibility: visible;
+    }
+
+    @media (min-width: 801px) {
+        padding: 40px 30px;
+        width: 100%;
+    }
+
+    .modal-close {
+        background-image: linear-gradient(180deg, transparent 0%, #e1e1e1 100%);
+        border-radius: 10px;
+        color: #0077c3;
+        display: grid;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-size: 42px;
+        font-weight: 500;
+        height: 36px;
+        place-content: center;
+        right: 31.5px;
+        right: 20px;
+        top: 40px;
+        width: 36px;
+
+        @media (min-width: 480px) {
+            right: 31.5px;
+            top: 50px;
+        }
+
+        &::before {
+            background: linear-gradient(to bottom, transparent 20%, #e1e1e1 100%);
+            border-radius: 10px;
+            content: "";
+            inset: 0;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            padding: 5px;
+            position: absolute;
+        }
+    }
+
+    &__content {
+        border-radius: 10px;
+        max-width: 250px;
+
+        @media (min-width: 480px) {
+            max-width: 300px;
+        }
+
+        @media (min-width: 801px) {
+            max-width: 425px;
+        }
+
+        &::after {
+            background-image: url("../img/man-coupon-mobile.png");
+            background-position: 100% 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            width: 245px;
+            z-index: -1;
+
+            @media (min-width: 600px) {
+                background-image: url("../img/man-coupon-desktop.png");
+                width: 370px;
+            }
+        }
+    }
+
+    &__winning {
+        color: #0077c3;
+        display: block;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 1;
+        text-transform: uppercase;
+
+        @media (min-width: 480px) {
+            font-size: 44px;
+        }
+
+        @media (min-width: 801px) {
+            font-size: 56px;
+        }
+    }
+
+    &__heading {
+        color: #758791;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0;
+        margin-bottom: 15px;
+        padding-bottom: 20px;
+        position: relative;
+        text-transform: inherit;
+
+        @media (min-width: 480px) {
+            font-size: 26px;
+            margin-bottom: 25px;
+            padding-bottom: 30px;
+        }
+
+        @media (min-width: 801px) {
+            font-size: 34px;
+        }
+
+        &::after {
+            background-color: #dadce0;
+            content: "";
+            display: block;
+            height: 1px;
+            margin-top: 20px;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+
+            @media (min-width: 480px) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &__discount {
+        color: #0077c3;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        position: relative;
+
+        @media (min-width: 480px) {
+            font-size: 24px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+        }
+
+        @media (min-width: 801px) {
+            font-size: 28px;
+        }
+
+        &::after {
+            background-color: #dadce0;
+            content: "";
+            display: block;
+            height: 1px;
+            margin-top: 15px;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+
+            @media (min-width: 480px) {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    &__text {
+        color: #3a4b54;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+    }
+
+    &__button {
+        background-color: #0077c3;
+        border: 0;
+        border-radius: 4px;
+        color: #fff;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 0;
+        padding: 15px 10px;
+        text-transform: uppercase;
+
+        @media (min-width: 480px) {
+            font-size: 16px;
+            padding: 20px 15px;
+        }
+    }
+}

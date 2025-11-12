@@ -1,0 +1,34 @@
+.ysw-w-category-products {
+    .featured-products__product-list {
+        max-height: remCalc(950px);
+        transition: all 0.3s ease-in-out;
+
+        @include ysw-breakpoint("medium") {
+            max-height: remCalc(500px);
+        }
+
+        &:not(.is-loaded) {
+            overflow: hidden;
+            position: relative;
+
+            &::after {
+                background: linear-gradient(transparent, $ysw-white-color);
+                bottom: 0;
+                content: "";
+                height: remCalc(100px);
+                left: 0;
+                position: absolute;
+                width: 100%;
+            }
+        }
+    }
+
+    .pagination-list {
+        margin-top: remCalc(20px);
+    }
+
+    .pagination-item.pagination-item--previous > button,
+    .pagination-item.pagination-item--next > button {
+        color: $ysw-text-link-color;
+    }
+}

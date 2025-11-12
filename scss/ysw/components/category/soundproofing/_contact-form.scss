@@ -1,0 +1,133 @@
+.ysw-contact-form {
+    background-color: $ysw-blue-color--dark;
+    padding: remCalc(100px 24px 150px);
+
+    .container {
+        max-width: remCalc(610px);
+        padding-inline: 0;
+
+        @include ysw-breakpoint("mobile") {
+            padding-inline: remCalc(15px);
+        }
+    }
+
+    &__title {
+        color: $ysw-white-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(26px);
+        font-weight: 700;
+        margin-bottom: remCalc(20px);
+        margin-top: 0;
+        text-align: center;
+        text-transform: none;
+
+        @include ysw-breakpoint("b-medium") {
+            font-size: remCalc(30px);
+        }
+    }
+
+    &__text {
+        color: $ysw-white-color;
+        font-family: $ysw-open-sans-font;
+        font-size: remCalc(18px);
+        line-height: remCalc(26px);
+        margin-bottom: 0;
+        margin-bottom: remCalc(15px);
+        text-align: center;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &-number {
+            font-weight: 700;
+        }
+
+        &--or {
+            color: $ysw-white-color;
+            font-family: $ysw-open-sans-font;
+            font-size: remCalc(18px);
+            line-height: remCalc(26px);
+            position: relative;
+            text-transform: uppercase;
+
+            &::before {
+                background-color: $ysw-white-color;
+                content: "";
+                height: remCalc(1px);
+                left: 50%;
+                opacity: 0.5;
+                position: absolute;
+                top: 50%;
+                transform: translateX(-50%);
+                width: remCalc(245px);
+                z-index: 0;
+            }
+
+            span {
+                background-color: $ysw-blue-color--dark;
+                display: block;
+                margin-inline: auto;
+                position: relative;
+                width: remCalc(45px);
+                z-index: 1;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: remCalc(18px);
+        margin-top: remCalc(30px);
+    }
+
+    &__input {
+        background-color: $ysw-white-color;
+        border: 0;
+        color: $ysw-text-heading-color;
+        font-family: $ysw-open-sans-font;
+        font-size: remCalc(18px);
+        height: remCalc(51px);
+        line-height: 1;
+        padding: remCalc(15px) remCalc(22px);
+        width: 100%;
+
+        @include ysw-breakpoint("small") {
+            width: calc(50% - 9px);
+        }
+
+        &::placeholder {
+            line-height: 1;
+            text-align: left;
+        }
+    }
+
+    &__textarea {
+        background-color: $ysw-white-color;
+        border: 0;
+        color: $ysw-text-heading-color;
+        font-family: $ysw-open-sans-font;
+        font-size: remCalc(18px);
+        height: remCalc(140px);
+        padding: remCalc(15px) remCalc(22px);
+        width: 100%;
+
+        &::placeholder {
+            text-align: left;
+        }
+    }
+
+    &__button {
+        background-color: $ysw-blue-color--dark;
+        border: remCalc(2px) solid $ysw-white-color;
+        color: $ysw-white-color;
+        font-family: $ysw-body-font;
+        font-size: remCalc(16px);
+        font-weight: 700;
+        height: remCalc(60px);
+        margin-top: remCalc(2px);
+        text-transform: uppercase;
+        width: remCalc(180px);
+    }
+}

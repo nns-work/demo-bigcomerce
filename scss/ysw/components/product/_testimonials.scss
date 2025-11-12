@@ -1,0 +1,13 @@
+.ssaTestimonials {
+    .messageBlock {
+        p {
+            font-family: $ysw-body-font !important; // override font-family
+            font-size: remCalc(14px) !important; // override font-size
+
+            span {
+                display: inline-block;
+                font-weight: 700;
+            }
+        }
+    }
+}

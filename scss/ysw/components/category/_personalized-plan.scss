@@ -1,0 +1,185 @@
+.ysw-l-personalized-plan {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: remCalc(820px);
+    padding: remCalc(40px) 5%;
+
+    @include ysw-breakpoint("medium") {
+        padding-top: remCalc(65px);
+    }
+
+    &__title {
+        color: $ysw-white-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(30px);
+        font-style: normal;
+        font-weight: 800;
+        letter-spacing: normal;
+        line-height: 1;
+        margin-bottom: remCalc(40px);
+        margin-top: 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include ysw-breakpoint("small") {
+            font-size: remCalc(44px);
+            margin-bottom: remCalc(60px);
+        }
+    }
+
+    .container {
+        column-gap: remCalc(60px);
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: remCalc(1260px);
+        padding: 0;
+
+        @include ysw-breakpoint("medium") {
+            flex-direction: row;
+        }
+    }
+
+    .ysw-c-icon-label {
+        margin-bottom: remCalc(40px);
+
+        @include ysw-breakpoint("medium") {
+            max-width: remCalc(410px);
+        }
+
+        &__list {
+            list-style: none;
+            margin: 0;
+        }
+
+        &__item {
+            column-gap: remCalc(20px);
+            display: flex;
+            margin-bottom: remCalc(40px);
+        }
+
+        &__icon {
+            max-width: remCalc(34px);
+            min-width: remCalc(34px);
+        }
+
+        &__title {
+            color: $ysw-white-color;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(18px);
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: normal;
+            line-height: 1;
+            margin: 0;
+            text-align: left;
+
+            @include ysw-breakpoint("medium") {
+                font-size: remCalc(23px);
+            }
+        }
+    }
+
+    .ysw-c-title-price {
+        @include ysw-breakpoint("medium") {
+            max-width: remCalc(420px);
+            width: 100%;
+        }
+
+        &__list {
+            list-style: none;
+            margin: 0;
+        }
+
+        &__item {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: remCalc(10px) 0;
+
+            &:first-of-type {
+                padding-top: 0;
+            }
+
+            &--border-bottom {
+                border-bottom: remCalc(1px) solid $ysw-blue-color--lightest;
+            }
+        }
+
+        &__title {
+            color: $ysw-white-color;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(18px);
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: normal;
+            line-height: 1;
+            margin: 0;
+            max-width: auto;
+            text-align: left;
+
+            @include ysw-breakpoint("medium") {
+                font-size: remCalc(23px);
+            }
+
+            &--extra-bold {
+                font-weight: 800;
+            }
+        }
+
+        &__price {
+            color: $ysw-white-color;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(24px);
+            font-style: normal;
+            font-weight: 800;
+            letter-spacing: normal;
+            line-height: 1;
+            text-align: left;
+        }
+
+        &__pay-only {
+            color: $ysw-white-color;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(27px);
+            font-style: normal;
+            font-weight: 800;
+            letter-spacing: normal;
+            line-height: 1;
+            margin-bottom: remCalc(40px);
+            margin-top: remCalc(30px);
+            text-align: left;
+            text-transform: uppercase;
+
+            @include ysw-breakpoint("medium") {
+                font-size: remCalc(39px);
+            }
+        }
+
+        &__button {
+            background-color: $ysw-white-color;
+            border: remCalc(5px) solid $ysw-border-color;
+            color: $ysw-blue-color;
+            display: block;
+            font-family: "Noto Sans", sans-serif;
+            font-size: remCalc(16px);
+            font-style: normal;
+            font-weight: 900;
+            height: remCalc(60px);
+            letter-spacing: normal;
+            line-height: 1;
+            margin: 0 auto;
+            padding: remCalc(17px 25px);
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: max-content;
+
+            @include ysw-breakpoint("handheld") {
+                font-size: remCalc(18px);
+                margin: 0;
+            }
+        }
+    }
+}

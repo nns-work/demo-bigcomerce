@@ -1,0 +1,186 @@
+.ysw-c-discount-modal {
+    border: remCalc(8px) solid $ysw-color-price-table-gray;
+    border-radius: remCalc(30px);
+    margin: 0;
+    max-width: remCalc(750px);
+    padding: remCalc(30px 20px);
+    width: 90%;
+
+    @include ysw-breakpoint("medium") {
+        padding: remCalc(40px 30px);
+        width: 100%;
+    }
+
+    .modal-close {
+        background-image: linear-gradient(180deg, transparent 0%, $ysw-input-border-color 100%);
+        border-radius: remCalc(10px);
+        color: $ysw-blue-color;
+        display: grid;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(42px);
+        font-weight: 500;
+        height: remCalc(36px);
+        place-content: center;
+        right: remCalc(31.5px);
+        top: remCalc(25px);
+        width: remCalc(36px);
+
+        &::before {
+            background: linear-gradient(to bottom, transparent 20%, $ysw-input-border-color 100%);
+            border-radius: remCalc(10px);
+            content: "";
+            inset: 0;
+            mask: linear-gradient($ysw-white-color 0 0) content-box, linear-gradient($ysw-white-color 0 0);
+            mask-composite: exclude;
+            padding: remCalc(5px);
+            position: absolute;
+        }
+    }
+
+    &__content {
+        border-radius: remCalc(10px);
+        max-width: remCalc(250px);
+
+        @include ysw-breakpoint("handheld") {
+            max-width: remCalc(300px);
+        }
+
+        @include ysw-breakpoint("medium") {
+            max-width: remCalc(425px);
+        }
+
+        &::after {
+            background-image: url("../img/man-coupon-mobile.png");
+            background-position: 100% 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            width: remCalc(245px);
+            z-index: -1;
+
+            @include ysw-breakpoint("600") {
+                background-image: url("../img/man-coupon-desktop.png");
+                width: remCalc(370px);
+            }
+        }
+    }
+
+    &__winning {
+        color: $ysw-blue-color;
+        display: block;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(32px);
+        font-weight: 900;
+        line-height: 1;
+        text-transform: uppercase;
+
+        @include ysw-breakpoint("handheld") {
+            font-size: remCalc(44px);
+        }
+
+        @include ysw-breakpoint("medium") {
+            font-size: remCalc(56px);
+        }
+    }
+
+    &__heading {
+        color: $ysw-color-price-table-gray--dark;
+        font-size: remCalc(20px);
+        font-weight: 700;
+        line-height: 1;
+        margin: 0;
+        margin-bottom: remCalc(15px);
+        padding-bottom: remCalc(20px);
+        position: relative;
+        text-transform: inherit;
+
+        @include ysw-breakpoint("handheld") {
+            font-size: remCalc(26px);
+            margin-bottom: remCalc(25px);
+            padding-bottom: remCalc(30px);
+        }
+
+        @include ysw-breakpoint("medium") {
+            font-size: remCalc(34px);
+        }
+
+        &::after {
+            background-color: $ysw-color-price-table-gray;
+            content: "";
+            display: block;
+            height: remCalc(1px);
+            margin-top: remCalc(20px);
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+
+            @include ysw-breakpoint("handheld") {
+                margin-top: remCalc(30px);
+            }
+        }
+    }
+
+    &__discount {
+        color: $ysw-blue-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(18px);
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: remCalc(15px);
+        padding-bottom: remCalc(15px);
+        position: relative;
+
+        @include ysw-breakpoint("handheld") {
+            font-size: remCalc(24px);
+            margin-bottom: remCalc(25px);
+            padding-bottom: remCalc(25px);
+        }
+
+        @include ysw-breakpoint("medium") {
+            font-size: remCalc(28px);
+        }
+
+        &::after {
+            background-color: $ysw-color-price-table-gray;
+            content: "";
+            display: block;
+            height: remCalc(1px);
+            margin-top: remCalc(15px);
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+
+            @include ysw-breakpoint("handheld") {
+                margin-top: remCalc(25px);
+            }
+        }
+    }
+
+    &__text {
+        color: $ysw-blue-color--darker;
+        font-family: $ysw-headings-font;
+        font-weight: 400;
+    }
+
+    &__button {
+        background-color: $ysw-blue-color;
+        border-radius: remCalc(4px);
+        color: $ysw-white-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(14px);
+        font-weight: 400;
+        margin-bottom: 0;
+        padding: remCalc(15px 10px);
+        text-transform: uppercase;
+
+        @include ysw-breakpoint("handheld") {
+            font-size: remCalc(16px);
+            padding: remCalc(20px 15px);
+        }
+    }
+}
