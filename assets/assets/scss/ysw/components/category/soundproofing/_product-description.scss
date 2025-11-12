@@ -1,0 +1,174 @@
+.ysw-w-product-description {
+    padding-top: remCalc(80px);
+
+    &__heading {
+        margin: 0 0 remCalc(40px);
+
+        @include ysw-breakpoint("b-medium") {
+            margin: 0 0 remCalc(60px);
+        }
+
+        &-title {
+            color: $ysw-heading-color;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(22px);
+            font-weight: 700;
+            line-height: 1.1;
+
+            @include ysw-breakpoint("b-small") {
+                font-size: remCalc(30px);
+            }
+
+            @include ysw-breakpoint("b-medium") {
+                font-size: remCalc(42px);
+            }
+        }
+
+        &-text {
+            color: $ysw-text-heading-color;
+            font-family: $ysw-body-font;
+            font-size: remCalc(15px);
+            margin-top: remCalc(20px);
+            text-align: left;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+
+        &-product {
+            margin-bottom: remCalc(60px);
+
+            &-title {
+                border-bottom: remCalc(1px) solid $ysw-text-heading-color;
+                line-height: 1.2;
+                margin-top: 0;
+
+                a {
+                    color: $ysw-heading-color;
+                    font-family: $ysw-headings-font;
+                    font-size: remCalc(16px);
+                    font-weight: 700;
+                    text-decoration: none;
+
+                    @include ysw-breakpoint("b-small") {
+                        font-size: remCalc(18px);
+                    }
+                }
+            }
+
+            &-wrap {
+                align-items: flex-start;
+                display: flex;
+
+                @include ysw-breakpoint-down("mobile") {
+                    align-items: center;
+                }
+
+                @include ysw-breakpoint-down("b-small") {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+
+                &--description {
+                    align-items: unset;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    width: 100%;
+
+                    @include ysw-breakpoint("b-small") {
+                        margin-left: remCalc(30px);
+                    }
+
+                    @include ysw-breakpoint("b-large") {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: remCalc(50px);
+                    }
+                }
+            }
+
+            &-image {
+                max-height: remCalc(228px);
+                min-width: remCalc(220px);
+
+                @include ysw-breakpoint-down("b-large") {
+                    margin-bottom: remCalc(30px);
+                }
+
+                &-img {
+                    display: block;
+                    height: 100%;
+                    margin-bottom: remCalc(15px);
+                    max-height: remCalc(165px);
+                    max-width: remCalc(220px);
+                    object-fit: scale-down;
+                    object-position: center;
+                    width: 100%;
+                }
+
+                &-link {
+                    background-color: $ysw-text-link-color;
+                    color: $ysw-white-color;
+                    display: block;
+                    font-family: $ysw-headings-font;
+                    font-size: remCalc(18px);
+                    font-weight: 400;
+                    line-height: 1;
+                    padding: remCalc(15px);
+                    text-align: center;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    width: 100%;
+                }
+            }
+
+            &-text {
+                color: $ysw-text-heading-color;
+                font-family: $ysw-body-font;
+                font-size: remCalc(15px);
+                text-align: left;
+
+                @include ysw-breakpoint("b-large") {
+                    width: remCalc(425px);
+                }
+            }
+
+            &-uses {
+                background-color: $ysw-common-uses-color;
+                padding: remCalc(20px 25px);
+                width: remCalc(220px);
+
+                &-title {
+                    color: $ysw-heading-color;
+                    font-family: $ysw-headings-font;
+                    font-size: remCalc(16px);
+                    font-weight: 700;
+                    margin: 0 0 remCalc(5px);
+                    text-align: left;
+                }
+
+                &-list {
+                    list-style-type: disc;
+
+                    &-item {
+                        margin-bottom: remCalc(5px);
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        &-text {
+                            color: $ysw-text-heading-color;
+                            font-family: $ysw-body-font;
+                            font-size: remCalc(15px);
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

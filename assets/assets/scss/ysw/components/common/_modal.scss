@@ -1,0 +1,49 @@
+.ysw-c-modal {
+    background-color: transparent;
+
+    &--mobile {
+        max-height: remCalc(690px);
+        max-width: remCalc(690px);
+        width: 90%;
+    }
+
+    .modal-content {
+        padding: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    &__link {
+        position: absolute;
+
+        &--desktop {
+            bottom: 7%;
+            bottom: 6.5%;
+            height: 10%;
+            left: 39%;
+            width: 24.3%;
+        }
+
+        &--mobile {
+            bottom: 20%;
+            height: 8.7%;
+            left: 39%;
+            width: 25%;
+        }
+
+        &--damplifier {
+            bottom: 11.2%;
+            height: 9%;
+            left: 14%;
+            width: 21%;
+        }
+
+
+        &--luxury {
+            bottom: 11.5%;
+            height: 9%;
+            right: 14.7%;
+            width: 21%;
+        }
+    }
+}

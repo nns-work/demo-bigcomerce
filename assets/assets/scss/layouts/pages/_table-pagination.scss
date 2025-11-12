@@ -1,0 +1,150 @@
+// Table Pagination
+
+.table-pagination__wrapper {
+  text-align: center;
+  margin: 24px 0 0;
+}
+
+.table-pagination {
+  display: inline-flex;
+  font-family: $fontFamily-montserrat;
+  font-size: 11px;
+
+  @include breakpoint("small") {
+    font-size: 12px;
+  }
+
+  .table-pagination__pager {
+    display: inline-flex;
+    border: 1px solid #EDEDED;
+    border-radius: 2px;
+    height: 30px;
+    line-height: 1;
+    list-style: none;
+    margin: 0 0 0 6px;
+    padding: 0;
+
+    @include breakpoint("small") {
+      height: 34px;
+    }
+
+    @include breakpoint("medium") {
+      margin-left: 12px;
+    }
+  }
+
+  .table-pagination__item {
+    border-right: 1px solid #EDEDED;
+    min-width: 30px;
+    width: 30px;
+
+    button {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      padding: 0;
+      position: relative;
+      width: 100%;
+
+      &[disabled] {
+        opacity: 0.14;
+      }
+    }
+
+    &.count {
+      min-width: 100px;
+      padding: 9px 5px 8px;
+      text-align: center;
+      white-space: nowrap;
+
+      @include breakpoint("small") {
+        padding: 10px 5px;
+      }
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  input,
+  select {
+    appearance: none;
+    background: #fff;
+    border: 1px solid #EDEDED;
+    border-radius: 2px;
+    color: inherit;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    height: 30px;
+    letter-spacing: 0;
+    line-height: 1.2;
+    padding: 0 30px 0 15px;
+    position: relative;
+
+    @include breakpoint("small") {
+      height: 34px;
+    }
+
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: #39474f;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #39474f;
+    }
+
+    &::placeholder {
+      color: #39474f;
+    }
+
+    &[disabled],
+    &:disabled {
+      background-color: #fbfbfb;
+      border-color: #dfdfdf;
+      color: inherit;
+      opacity: 0.8;
+    }
+
+    + label {
+      background: transparent;
+      bottom: calc(100% - 6px);
+      color: inherit;
+      font-family: $fontFamily-helvetica;
+      font-size: 10px;
+      left: 13px;
+      line-height: normal;
+      margin: 0;
+      opacity: 0;
+      padding: 0 3px;
+      pointer-events: none;
+      position: absolute;
+      transform: translateY(3px);
+      transition: all 0.1s ease-in-out;
+
+      @include breakpoint("small") {
+        bottom: calc(100% - 7px);
+        font-size: 12px;
+      }
+    }
+  }
+
+  input:not(:placeholder-shown),
+  input:-webkit-autofill {
+    ~ label {
+      background: #fff;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  select {
+    background-image: url("../img/arrow-down.svg");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+  }
+}

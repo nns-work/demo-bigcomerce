@@ -1,0 +1,32 @@
+// =============================================================================
+// FACET LABEL (CSS)
+// =============================================================================
+
+.facetedSearch a.facetLabel {
+    color: #000;
+}
+
+.facetLabel {
+    background: $facetLabel-backgroundColor;
+    border-radius: $facetLabel-borderRadius;
+    border: 1px solid #A5A5A5;
+    color: #000;
+    font-size: 14px;
+    padding: 5px 10px 5px 12px;
+    text-decoration: none;
+
+    .icon {
+        @include square(14px);
+        display: inline-block;
+        fill: $facetLabel-removeIcon-color;
+        margin-left: 6px;
+        position: relative; // Vertical align the icon
+        top: -1px; // Vertical align the icon
+    }
+
+    &:hover,
+    &:focus {
+        background: darken($facetLabel-backgroundColor, 10%);
+        color: #000;
+    }
+}

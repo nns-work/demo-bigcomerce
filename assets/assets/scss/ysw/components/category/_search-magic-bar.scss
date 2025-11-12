@@ -1,0 +1,101 @@
+.ysw-c-search-magic-bar {
+    align-items: center;
+    background-image: linear-gradient(to right, $ysw-color-search-magic-bar-blue 0%, $ysw-color-search-magic-bar-blue--light 50%);
+    border: remCalc(7px) solid $ysw-grey-color--lighter;
+    column-gap: remCalc(10px);
+    display: flex;
+    margin-block: remCalc(30px 25px);
+    margin-inline: remCalc(10.5px);
+    padding-block: remCalc(10px);
+    position: relative;
+
+    @include ysw-breakpoint("medium") {
+        background-image: linear-gradient(to right, $ysw-color-search-magic-bar-blue 6%, $ysw-color-search-magic-bar-blue--light 50%);
+        margin-inline: 0;
+        max-height: remCalc(82px);
+        min-height: remCalc(82px);
+        padding-block: remCalc(5px);
+    }
+
+    &__background {
+        display: none;
+        max-height: remCalc(82px);
+        min-height: remCalc(82px);
+        position: absolute;
+        z-index: -1;
+    }
+
+    &__mag-glass {
+        margin-bottom: (-(remCalc(10px)));
+        max-width: remCalc(77px);
+
+        @include ysw-breakpoint("medium") {
+            margin-bottom: 0;
+            margin-top: (-(remCalc(7px)));
+            max-width: remCalc(77px);
+        }
+    }
+
+    form {
+        column-gap: remCalc(10px);
+        display: flex;
+        flex-direction: column;
+        padding-right: remCalc(6px);
+        width: 100%;
+
+        @include ysw-breakpoint("medium") {
+            align-items: center;
+            flex-direction: row;
+        }
+
+        div {
+            align-items: center;
+            display: flex;
+            padding-right: remCalc(15px);
+            width: 100%;
+        }
+
+        label {
+            color: $ysw-white-color;
+            font-family: $ysw-body-font;
+            font-size: remCalc(12px);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: remCalc(10px);
+            text-transform: uppercase;
+
+            @include ysw-breakpoint("handheld") {
+                font-size: remCalc(13px);
+            }
+
+            @include ysw-breakpoint("medium") {
+                font-size: remCalc(15px);
+                margin-bottom: 0;
+                max-width: remCalc(150px);
+            }
+        }
+
+        input {
+            width: 100%;
+
+            @include ysw-breakpoint-down("medium") {
+                padding-inline: remCalc(10px);
+            }
+
+            &::placeholder {
+                color: $ysw-color-search-magic-bar-placeholder;
+                text-transform: uppercase;
+            }
+        }
+
+        button {
+            background-color: $ysw-color-search-magic-bar-button;
+            font-family: $ysw-body-font;
+            font-size: remCalc(22px);
+            font-weight: 900;
+            margin-bottom: 0;
+            padding: remCalc(14px);
+            text-transform: uppercase;
+        }
+    }
+}

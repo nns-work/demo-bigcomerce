@@ -1,0 +1,11 @@
+.breadcrumbs-wrapper {
+    display: inline-block;
+
+    &--other {
+        padding-inline: remCalc(10.5px);
+    }
+
+    .breadcrumbs {
+        margin-top: 0;
+    }
+}

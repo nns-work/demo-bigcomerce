@@ -1,0 +1,21 @@
+// The utilities contain important to overwrite the styles of the components
+
+.ysw-u-m {
+    &t-0 {
+        margin-top: 0;
+    }
+}
+
+.ysw-u-container {
+    margin-inline: auto;
+    max-width: remCalc(970px);
+    padding-inline: remCalc(24px);
+
+    @include ysw-breakpoint("mobile") {
+        padding-inline: remCalc(15px);
+    }
+}
+
+.ysw-u-hidden {
+    display: none !important;
+}

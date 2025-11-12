@@ -1,0 +1,293 @@
+// This code is from the client, it was moved to this file to optimize it.
+
+.productView--generic-quote-only {
+    .slideBtnWrap {
+        display: block;
+    }
+
+    .productView-image {
+        pointer-events: auto !important;
+    }
+
+    .productView-product.v_titleMobile {
+        display: none;
+    }
+
+    input#form-action-buyNow,
+    input#form-action-addToCart,
+    .form-field.form-field--increments {
+        display: none;
+    }
+
+    [data-tid="instant-bolt-checkout-button"] {
+        display: none !important;
+    }
+
+    .productView-options .form-field {
+        display: none;
+        margin-bottom: 1.5rem;
+    }
+
+    .container {
+        max-width: 1162px;
+        min-width: 0;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    #qn-add-to-quote,
+    .qn-add-to-quote {
+        background-color: #0677bf;
+        border-radius: remCalc(3px);
+        border-width: 0;
+        color: $ysw-white-color;
+        display: inline-block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0;
+        font-weight: 400;
+        line-height: normal;
+        padding: 15px 15px 16px;
+        width: auto;
+    }
+
+    .qn-add-to-quote::before {
+        font-size: 14px;
+    }
+
+    .productView-price {
+        align-items: center;
+        display: flex;
+    }
+
+    .price-section.price-section--withoutTax {
+        padding-right: 12px;
+    }
+
+    .productView-details .price-section>.price.price--withoutTax {
+        border-radius: 3px;
+        color: #0277bd;
+        display: inline-block;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(30px);
+        font-weight: 800;
+        line-height: 1;
+        padding-top: remCalc(26px);
+        position: relative;
+    }
+
+    .productView-details .price-section>.price.price--withoutTax::before {
+        color: $ysw-black-color;
+        content: "Starting at";
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+        position: absolute;
+        text-transform: uppercase;
+        top: 9px;
+    }
+
+    @media screen and (max-width:600px) {
+        #qn-add-to-quote,
+        .qn-add-to-quote {
+            width: 100%;
+        }
+
+        .slideBtnWrap {
+            display: block !important;
+        }
+
+        .productView-images {
+            padding-inline: 0;
+        }
+    }
+}
+
+// Here ends the code from the client.
+
+.productView--generic-quote-only {
+    .breadcrumbs {
+        padding-inline: remCalc(14px);
+    }
+
+    .productView-images {
+        @include ysw-breakpoint("product-view") {
+            position: sticky;
+            top: remCalc(150px);
+        }
+
+        .productView-images__wrapper {
+            position: relative;
+
+            .slidePrevBtn {
+                left: -(remCalc(30px));
+
+                @include ysw-breakpoint("small") {
+                    left: -(remCalc(40px));
+                }
+
+                @include ysw-breakpoint("product-view") {
+                    left: -(remCalc(30px));
+                }
+
+                @include ysw-breakpoint("mobile") {
+                    left: -(remCalc(40px));
+                }
+            }
+
+            .slideNextBtn {
+                right: -(remCalc(30px));
+
+                @include ysw-breakpoint("small") {
+                    right: -(remCalc(40px));
+                }
+            }
+        }
+
+        .youtube {
+            margin-top: remCalc(30px);
+        }
+    }
+
+    .productView-details {
+        @include ysw-breakpoint-down("product-view") {
+            margin-bottom: 0;
+        }
+    }
+
+    .productView-ads__top-seller {
+        margin-bottom: remCalc(10px);
+        max-width: remCalc(200px);
+    }
+
+    .productView-title {
+        color: $ysw-timberwool-sample-modal-title-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(24px);
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .v_prodDesc {
+        width: 100%;
+    }
+
+    .productView-details-bottom {
+        background-color: $ysw-white-color;
+        border: remCalc(8px) solid darken($ysw-white-color, 6%);
+        border-radius: remCalc(30px);
+        font-family: $ysw-body-font;
+        margin-block: remCalc(25px);
+        overflow: hidden;
+        padding-block: remCalc(20px 35px);
+        padding-inline: remCalc(30px);
+    }
+
+    .productView-price {
+        align-items: flex-start;
+        border-bottom: remCalc(1px) solid darken($ysw-white-color, 13%);
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: remCalc(25px);
+        padding-bottom: remCalc(15px);
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .inStock {
+                display: flex;
+                justify-content: flex-end;
+
+                img {
+                    margin-top: remCalc(5px);
+                    max-height: remCalc(32px);
+                    max-width: remCalc(100px);
+                    min-height: remCalc(32px);
+                    min-width: remCalc(100px);
+                    user-select: none;
+                }
+            }
+        }
+    }
+
+    .productView-options {
+        margin-top: 0;
+    }
+
+    .alertBox.productAttributes-message {
+        display: none !important; // Hide the form alert box.
+    }
+
+    .form-action {
+        margin-top: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .v_needs {
+        border-bottom: remCalc(1px) solid $ysw-color-price-table-gray--medium;
+        margin-block: 0 remCalc(25px);
+        padding-bottom: remCalc(15px);
+
+        .v_need {
+            align-items: center;
+            display: flex;
+            margin-bottom: remCalc(10px);
+            margin-left: 1.6rem;
+            padding-left: 0.8rem;
+            position: relative;
+
+            &::before {
+                background-image: url("../img/check.png");
+                display: block;
+                font-weight: bold;
+                height: remCalc(25px);
+                left: -1.6rem;
+                position: absolute;
+                position: absolute;
+                top: 0;
+                width: remCalc(25px);
+            }
+        }
+
+        .v_needText {
+            font-family: $ysw-headings-font;
+            font-size: remCalc(18px);
+            font-weight: 800;
+            line-height: normal;
+            padding-right: 0;
+
+            a {
+                font-size: remCalc(18px);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.related-product {
+    &--generic-quote-only {
+        background-image: linear-gradient(to top, darken($ysw-white-color, 5%) 50%, $ysw-white-color);
+        margin-bottom: remCalc(60px);
+        padding-bottom: remCalc(25px);
+
+        h2 {
+            border-bottom: remCalc(1px) solid $ysw-color-header-border;
+            color: $ysw-blue-color;
+            font-family: $ysw-headings-font;
+            font-weight: 700;
+            margin-bottom: remCalc(35px);
+            padding-bottom: remCalc(15px);
+            text-transform: capitalize;
+        }
+    }
+}
+
+.trustspot {
+    &--generic-quote-only {
+        margin-inline: auto;
+        margin-inline: remCalc(14px);
+        max-width: remCalc(1000px);
+    }
+}

@@ -1,0 +1,29 @@
+.ysw-c-most-popular {
+    &__title {
+        color: $ysw-blue-color;
+        font-family: Montserrat;
+        font-size: remCalc(34px);
+        font-weight: 800;
+        line-height: remCalc(30px);
+        text-align: center;
+        text-transform: uppercase;
+
+        @include ysw-breakpoint("medium") {
+            font-size: remCalc(44px);
+            line-height: remCalc(60px);
+        }
+    }
+
+    .container {
+        column-gap: remCalc(15px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: remCalc(1260px);
+        padding: 0;
+    }
+
+    .ysw-c-solution__product-set {
+        justify-content: flex-start;
+    }
+}

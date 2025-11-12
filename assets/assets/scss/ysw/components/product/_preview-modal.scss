@@ -1,0 +1,30 @@
+#previewModal {
+    .previewCartCheckout-additionalCheckoutButtons {
+        &::before {
+            content: "or use";
+        }
+
+        &::after {
+            content: "Express Check Out";
+            font-size: remCalc(16px);
+            top: (-(remCalc(11px)));
+            width: remCalc(150px);
+        }
+    }
+
+    .CheckoutButton {
+        display: flex;
+        justify-content: center;
+
+        div {
+            max-width: 100% !important; // Override the inline style
+            min-width: 100% !important; // Override the inline style
+        }
+
+        .FloatRight.PaypalCommerceCheckout.RemoteCheckout {
+            .or-use-label {
+                display: none !important; // Override the inline style
+            }
+        }
+    }
+}

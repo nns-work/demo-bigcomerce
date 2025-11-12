@@ -1,0 +1,244 @@
+// =============================================================================
+// FACET SEARCH (CSS)
+// =============================================================================
+
+
+// Faceted search toggle
+// -----------------------------------------------------------------------------
+//
+// 1. Do not show if viewport is over "medium" breakpoint
+//
+// -----------------------------------------------------------------------------
+
+.facetedSearch {
+    color: #000;
+    font-family: $fontFamily-montserrat;
+    font-weight: 400;
+
+    a {
+        color: inherit;
+
+    }
+
+    .accordion-navigation-actions>a {
+        color: #000;
+
+        &:hover,
+        &:focus {
+            color: $color-brand;
+        }
+    }
+
+    .facetedSearch-clearLink {
+        margin-right: 3px;
+    }
+
+    .accordion--navList .accordion-navigation-actions {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.facetedSearch__count {
+    color: #000;
+    display: none;
+    border-bottom: 1px solid #ccc;
+    font-family: $fontFamily-montserrat;
+    font-size: 18px;
+    margin: 0 0 24px;
+    padding: 0 0 24px;
+
+    .facetedSearch__selected-filters & {
+        display: block
+    }
+}
+
+.facetedSearch-toggle {
+    @include grid-row;
+    
+    background-color: #eee;
+    color: #000;
+    border: 0;
+    border-radius: 0;
+    display: block;
+    height: 40px;
+    margin-bottom: $facetedSearch-toggle-verticalSpacing;
+    padding: $facetedSearch-toggle-padding;
+    font-family: $body-font;
+
+    @include breakpoint("medium") {
+        // scss-lint:disable ImportantRule
+        display: none !important; // 1
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken(#eee, 10%);
+        color: #000;
+    }
+
+    &.is-open {
+        @media screen and (max-width: 800px) {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: +1000;
+            left: 0;
+            margin: 0;
+        }
+    }
+}
+
+.facetedSearch-toggle-text,
+.facetedSearch-toggle-indicator {
+    display: block;
+    font-weight: normal;
+}
+
+.facetedSearch-toggle-text {
+    @include grid-column(7);
+    padding: 0;
+    text-align: left;
+}
+
+.facetedSearch-toggle-indicator {
+    @include grid-column(5);
+    font-weight: bold;
+    padding: 0;
+    text-align: right;
+}
+
+
+// Faceted search nav list
+// -----------------------------------------------------------------------------
+//
+// 1. Do not show if viewport is over "medium" breakpoint
+//
+// -----------------------------------------------------------------------------
+.facetedSearch-navList {
+    display: none;
+    padding: 40px 20px 45px;
+
+    @include breakpoint("medium") {
+        // scss-lint:disable ImportantRule
+        display: block !important; // 1
+        padding: 0;
+    }
+
+    .accordion-title {
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+
+        @include breakpoint("medium") {
+            font-size: 16px;
+        }
+    }
+
+    .accordion-block {
+        border-top: 1px solid #ccc;
+        margin-top: 24px;
+        padding-top: 24px;
+    }
+
+    .navList-action-close {
+        transform: translateY(-3px);
+    }
+
+    .navList-action--checkbox {
+        padding-left: 36px;
+        margin-bottom: 10px;
+
+        &::before {
+            margin-top: 0;
+            height: 24px;
+            transform: translateY(-50%);
+            width: 24px;
+        }
+    }
+
+    .navList-action--checkbox.is-checked::before,
+    .navList-action--checkbox.is-selected::before {
+        background-color: #a5a5a5;
+        border-color: #a5a5a5;
+    }
+
+    .navList-action--checkbox.is-checked::after,
+    .navList-action--checkbox.is-selected::after {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z' fill='%23fff' /%3E%3C/svg%3E");
+        margin-top: 0;
+        height: 20px;
+        left: 2px;
+        top: 3px;
+        width: 20px;
+    }
+
+
+    &.is-open {
+        @media screen and (max-width: 800px) {
+            display: block;
+            position: fixed;
+            top: 40px;
+            width: 100%;
+            z-index: +1000;
+            left: 0;
+            margin: 0;
+            bottom: 0;
+            background-color: #fff;
+            overflow-y: scroll;
+
+            .accordion {
+                border: 0;
+            }
+
+            .accordion--navList {
+                .accordion-title {
+                    padding: 0;
+                }
+            
+                .accordion-navigation {
+                    border: 0;
+                }
+
+                .accordion-content {
+                    padding: 16px 0 0;
+                }
+
+                .navList {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .facetedSearch-toggle + &,
+    .sidebarBlock + & {
+        margin-top: $facetedSearch-toggle-verticalSpacing;
+    }
+
+    .navList--inner {
+        margin-left: spacing("single");
+    }
+}
+
+.facet-quick-heading {
+    text-transform: capitalize;
+}
+
+.facetedSearch-optionColumns {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.facetedSearch-refineFilters__clear {
+    display: inline-block;
+    margin-top: 13px;
+}
+
+// Facted search ratings
+.facetedSearch-content--rating {
+    .is-selected {
+        font-weight: bold;
+    }
+}

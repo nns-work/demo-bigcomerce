@@ -1,0 +1,348 @@
+/*
+    This file is an improvement of the original assets/scss/layouts/products/_productIcons.scss file.
+    Reduced file size and improved code readability.
+    The things that did not need to be modified were left the same.
+
+    This file is the styles file: templates/ysw/components/products/custom-sections/icon-descriptors.html
+
+    The cdn product-icons-rev2.svg and product-icons-mobile-rev2.svg are used
+*/
+
+$column1: remCalc(1117px);
+$column2: remCalc(880px);
+$column3: remCalc(636px);
+$column4: remCalc(396px);
+
+$row1: remCalc(-68px);
+$row2: remCalc(-296px);
+$row3: remCalc(-502px);
+$row4: remCalc(-694px);
+$row5: remCalc(-905px);
+$row6: remCalc(-1090px);
+
+$imageBasePosition: 46;
+
+@function mobiley($imagePosition, $verticalAdjustment: 0) {
+    @return(remCalc( $verticalAdjustment + $imageBasePosition - ($imagePosition * 92)));
+}
+
+@mixin vibrationDamper {
+    background-position: 0 mobiley(1);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column1 $row1;
+    }
+}
+
+@mixin carAudio {
+    background-position: 0 mobiley(5);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column1 $row2;
+    }
+}
+
+@mixin reduceRoadNoise {
+    background-position: 0 mobiley(9);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column1 $row3;
+    }
+}
+
+@mixin radiantBarrier {
+    background-position: 0 mobiley(13, -4);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column1 $row4;
+    }
+}
+
+@mixin usefulTools {
+    background-position: 0 mobiley(17, -21);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column1 $row5;
+    }
+}
+
+@mixin thermalInsulation {
+    background-position: 0 mobiley(2);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column2 $row1;
+    }
+}
+
+@mixin soundAbsorbing {
+    background-position: 0 mobiley(3);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column2 $row2;
+    }
+}
+
+@mixin buildingGrade {
+    background-position: 0 mobiley(10, -2);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column2 $row3;
+    }
+}
+
+@mixin onePound {
+    background-position: 0 mobiley(14, -8);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column2 $row4;
+    }
+}
+
+@mixin speakerEnhancement {
+    background-position: 0 mobiley(18, -26);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column2 $row5;
+    }
+}
+
+@mixin soundBlocking {
+    background-position: 0 mobiley(3);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column3 $row1;
+    }
+}
+
+@mixin aerospaceApproved {
+    background-position: 0 mobiley(7);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column3 $row2;
+    }
+}
+
+@mixin decoupler {
+    background-position: 0 mobiley(11);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column3 $row3;
+    }
+}
+
+@mixin lightweight {
+    background-position: 0 mobiley(15, -13);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column3 $row4;
+    }
+}
+
+@mixin healthAndSafety {
+    background-position: 0 mobiley(4);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column4 $row1;
+    }
+}
+
+@mixin bundleDiscount {
+    background-position: 0 mobiley(12);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column4 $row2;
+    }
+}
+
+@mixin oemApproved {
+    background-position: 0 mobiley(12);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column4 $row3;
+    }
+}
+
+@mixin reduceEngineNoise {
+    background-position: 0 mobiley(16, -17);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column4 $row4;
+    }
+}
+
+@mixin speakerEnhancement {
+    background-position-y: mobiley(1);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column2 $row5;
+    }
+}
+
+@mixin designerQuality {
+    background-position: 0 mobiley(20);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column3 $row5;
+    }
+}
+
+@mixin freeShipping {
+    background-position: 0 mobiley(21, 16);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column4 $row5;
+    }
+}
+
+@mixin madeInUSA {
+    background-position: 0 mobiley(19, -19);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column1 $row6;
+    }
+}
+
+@mixin guaranteedResults {
+    background-position: 0 mobiley(21, -56);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column2 $row6;
+    }
+}
+
+@mixin allVehicleTypes {
+    background-position: 0 mobiley(22, -30);
+
+    @include ysw-breakpoint("icon-descriptors") {
+        background-position: $column3 $row6;
+    }
+}
+
+.ysw-c-icon-descriptors {
+    background-color: $ysw-blue-color--dark;
+    display: block;
+    margin: remCalc(40px 0);
+    padding: remCalc(20px) 10%;
+
+    &__wrapper {
+        display: block;
+
+        @include ysw-breakpoint("icon-descriptors") {
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    &__icon {
+        background-image: url("https://secondskinaudio.com/content/product-icons-mobile-rev2.svg");
+        display: block;
+        height: remCalc(92px);
+        margin: 0 auto;
+
+        @include ysw-breakpoint("icon-descriptors") {
+            background-image: url("https://secondskinaudio.com/content/product-icons-rev2.svg");
+            background-size: auto;
+            display: block;
+            height: remCalc(200px);
+            width: remCalc(210px);
+        }
+
+        &--vibration-damper {
+            @include vibrationDamper;
+        }
+
+        &--car-audio {
+            @include carAudio;
+        }
+
+        &--reduce-road-noise {
+            @include reduceRoadNoise;
+        }
+
+        &--radiant-barrier {
+            @include radiantBarrier;
+        }
+
+        &--useful-tools {
+            @include usefulTools;
+        }
+
+        &--thermal-insulation {
+            @include thermalInsulation;
+        }
+
+        &--sound-absorbing {
+            @include soundAbsorbing;
+        }
+
+        &--building-grade {
+            @include buildingGrade;
+        }
+
+        &--one-pound,
+        &--one-pound-per-sq-ft {
+            @include onePound;
+        }
+
+        &--speaker-enhancement {
+            @include speakerEnhancement;
+        }
+
+        &--sound-blocking {
+            @include soundBlocking;
+        }
+
+        &--aerospace-approved {
+            @include aerospaceApproved;
+        }
+
+        &--decoupler {
+            @include decoupler;
+        }
+
+        &--lightweight {
+            @include lightweight;
+        }
+
+        &--health-and-safety {
+            @include healthAndSafety;
+        }
+
+        &--bundle-discount {
+            @include bundleDiscount;
+        }
+
+        &--oem-approved {
+            @include oemApproved;
+        }
+
+        &--reduce-engine-noise {
+            @include reduceEngineNoise;
+        }
+
+        &--speaker-enhancement {
+            @include speakerEnhancement;
+        }
+
+        &--designer-quality {
+            @include designerQuality;
+        }
+
+        &--free-shipping {
+            @include freeShipping;
+        }
+
+        &--made-in-usa {
+            @include madeInUSA;
+        }
+
+        &--guaranteed-results {
+            @include guaranteedResults;
+        }
+
+        &--all-vehicle-types {
+            @include allVehicleTypes;
+        }
+    }
+}

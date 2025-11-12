@@ -1,0 +1,494 @@
+.ysw-l-product-celluzorbe-v3 {
+    .breadcrumbs {
+        @include ysw-breakpoint-down("mobile") {
+            padding-inline: remCalc(14px);
+        }
+    }
+
+    .productView {
+        &-images {
+            @include ysw-breakpoint-between("product-view", "mobile") {
+                padding-left: remCalc(55px) !important; // override html styles
+                width: 50% !important;
+            }
+
+            .slidePrevBtn {
+                @include ysw-breakpoint-between("product-view", "mobile") {
+                    left: remCalc(10px) !important; // override html styles
+                }
+            }
+        }
+
+        &-details {
+            @include ysw-breakpoint-between("product-view", "mobile") {
+                width: 48% !important; // override html styles
+            }
+        }
+
+        &-ads {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: remCalc(20px);
+            text-transform: uppercase;
+
+            span {
+                background-color: $button--primary-backgroundColor;
+                color: $ysw-white-color;
+                display: block;
+                font-family: $ysw-headings-font;
+                padding-left: remCalc(4px);
+            }
+
+            &__free {
+                img {
+                    user-select: none;
+                    width: remCalc(115px);
+                }
+            }
+
+            &__best-seller {
+                img {
+                    user-select: none;
+                    width: remCalc(185px);
+                }
+            }
+        }
+
+        &-title {
+            line-height: 1.2;
+            margin-top: remCalc(10px);
+        }
+
+        &-free-shipping-container {
+            border: 0;
+
+            .shipsInDays {
+                border: 0;
+                padding-top: 0;
+
+                p {
+                    font-size: remCalc(16px);
+                    font-weight: 300;
+                    line-height: 1.3;
+                    margin-block: 0 remCalc(15px);
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                strong {
+                    font-weight: 800;
+                }
+            }
+        }
+
+        &-options {
+            background-color: $ysw-white-color;
+            border: remCalc(6px) solid $ysw-grey-color--lightest;
+            border-radius: remCalc(15px);
+            box-shadow: none;
+            padding: remCalc(20px 25px);
+
+            @include ysw-breakpoint-down("product-view") {
+                max-width: remCalc(460px);
+            }
+
+            .productView-price {
+                border-bottom: remCalc(2px) solid $ysw-grey-color--lightest;
+                width: 100%;
+
+                > div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-top: 0;
+                    max-width: remCalc(400px);
+                }
+
+                &__sqft {
+                    span {
+                        display: block;
+                    }
+
+                    &-text {
+                        color: $ysw-text-base-color;
+                        display: block;
+                        font-family: $ysw-body-font;
+                        font-size: remCalc(13px);
+                        font-weight: 700;
+                        margin-bottom: remCalc(5px);
+                        text-transform: uppercase;
+                    }
+
+                    &-price {
+                        color: $button--primary-backgroundColor;
+                        font-family: $ysw-headings-font;
+                        font-size: remCalc(30px);
+                        font-weight: 800;
+                        line-height: 1.1;
+                        margin-left: remCalc(12px);
+                        position: relative;
+
+                        &--before {
+                            color: $ysw-timberwool-before-price-color;
+                            text-decoration: line-through;
+
+                            &::before {
+                                color: $ysw-timberwool-before-price-color;
+                            }
+                        }
+
+                        &::before {
+                            content: "$";
+                            font-family: $ysw-headings-font;
+                            font-size: remCalc(16px);
+                            left: (-(remCalc(12px)));
+                            position: absolute;
+                            top: 0;
+                        }
+
+                        &::after {
+                            content: " / sqft";
+                            display: block;
+                            font-size: remCalc(16px);
+                            position: absolute;
+                            right: (-(remCalc(49px)));
+                            text-align: right;
+                            top: remCalc(3px);
+                        }
+                    }
+                }
+
+                .inStock {
+                    span {
+                        background-color: $button--primary-backgroundColor;
+                        border: remCalc(5px) solid $ysw-grey-color--lighter;
+                        color: $ysw-white-color;
+                        display: block;
+                        font-family: $ysw-headings-font;
+                        font-size: remCalc(14px);
+                        font-weight: 800;
+                        margin-top: remCalc(5px);
+                        padding-inline: remCalc(3px);
+                        text-transform: uppercase;
+                    }
+                }
+
+                &__shipping-text {
+                    font-size: remCalc(13px);
+                    margin-block: remCalc(5px 15px);
+                    width: 100%;
+                }
+            }
+
+            .price-section {
+                .price--withoutTax {
+                    color: $button--primary-backgroundColor;
+                    font-family: $ysw-headings-font;
+                    font-size: remCalc(30px);
+                    font-weight: 800;
+                    margin-left: remCalc(12px);
+                    position: relative;
+
+                    &::before {
+                        color: $button--primary-backgroundColor;
+                        left: (-(remCalc(12px)));
+                    }
+
+                    &::after {
+                        content: " / panel";
+                        display: block;
+                        font-size: remCalc(16px);
+                        position: absolute;
+                        right: (-(remCalc(63px)));
+                        text-align: right;
+                        top: remCalc(3px);
+                    }
+                }
+
+                &.showComparison .show {
+                    color: $ysw-text-base-color;
+                }
+            }
+
+            .form {
+                border-top: remCalc(2px) solid $ysw-grey-color--lightest;
+                display: block;
+                margin-top: remCalc(20px);
+                padding-top: remCalc(20px);
+
+                &-field {
+                    border-bottom: remCalc(2px) solid $ysw-grey-color--lightest;
+                    margin-bottom: remCalc(15px);
+                    padding-bottom: remCalc(10px);
+                }
+
+                &-label {
+                    color: $ysw-text-base-color;
+                    display: block;
+                    font-family: $ysw-body-font;
+                    font-size: remCalc(13px);
+                    margin-bottom: remCalc(5px);
+                    text-transform: uppercase;
+
+                    small {
+                        text-transform: uppercase;
+
+                        &::before {
+                            content: "(";
+                        }
+
+                        &::after {
+                            content: ")";
+                        }
+                    }
+                }
+
+                &-option {
+                    border: remCalc(5px) solid $ysw-color-price-table-gray;
+                    border-radius: 0;
+                    margin-right: remCalc(10px);
+                    padding: 0;
+
+                    &:is(.form-option-swatch) {
+                        span {
+                            border: remCalc(2px) solid $ysw-white-color;
+                        }
+                    }
+
+                    &-variant {
+                        align-items: center;
+                        color: $ysw-color-price-table-blue--dark;
+                        display: inline-flex;
+                        font-family: $ysw-headings-font;
+                        font-size: remCalc(14px);
+                        font-weight: bold;
+                        justify-content: center;
+                        line-height: 1;
+                        min-height: remCalc(30px);
+                        min-width: remCalc(30px);
+                        padding: 0;
+                    }
+                }
+
+                &-radio:checked + .form-option {
+                    border: remCalc(5px) solid $ysw-color-price-table-blue;
+                    box-shadow: none;
+                }
+
+                [data-product-option-change] {
+                    border-bottom: 0;
+                }
+
+                &-action {
+                    @include ysw-breakpoint("handheld") {
+                        float: none;
+                        padding: 0;
+                        width: auto;
+                    }
+
+                    .buy-buttons {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &-calculator {
+            max-width: 100%;
+
+            @include ysw-breakpoint("c-handheld") {
+                max-width: remCalc(400px);
+            }
+
+            .SquareFootage,
+            .NumberOfPanel {
+                font-weight: 400;
+                margin-bottom: remCalc(20px);
+                text-transform: uppercase;
+
+                label {
+                    color: $ysw-text-base-color;
+                    display: block;
+                    font-family: $ysw-body-font;
+                    font-size: remCalc(13px);
+                    margin-bottom: remCalc(5px);
+                }
+
+                input#squareFootage,
+                input#numberOfPanels {
+                    appearance: textfield;
+                    border: remCalc(5px) solid $ysw-color-price-table-gray;
+                    color: $ysw-black-color;
+                    font-family: $ysw-headings-font;
+                    font-size: remCalc(14px);
+                    font-weight: 400;
+                    padding: remCalc(8px 8px);
+                    width: 100%;
+
+                    &::placeholder {
+                        font-family: $ysw-headings-font;
+                        font-size: remCalc(13px);
+                    }
+                }
+
+                .changePanelNumbers {
+                    background: transparent;
+                    bottom: 0;
+                    left: auto;
+                    padding: remCalc(4px 4px 4px 4px);
+                    right: 0;
+                    top: 0;
+                    width: remCalc(35px);
+
+                    .increment {
+                        background: none !important; // override the background set by the theme
+                        height: 50% !important; // override the height set by the theme
+                        position: relative;
+
+                        .icon {
+                            fill: $button--primary-backgroundColor !important; // override the fill set by the theme
+                            height: remCalc(24px);
+                            pointer-events: none;
+                            position: absolute;
+                            right: 0;
+                            right: remCalc(3px);
+                            stroke: $button--primary-backgroundColor !important; // override the stroke set by the theme
+                            stroke-width: remCalc(1px);
+                            width: remCalc(24px);
+
+                            &--up {
+                                rotate: -90deg;
+                                top: 0;
+                            }
+
+                            &--down {
+                                rotate: 90deg;
+                                top: (-(remCalc(5px)));
+                            }
+                        }
+                    }
+                }
+            }
+
+            .SquareFootage {
+                width: 100%;
+
+                button {
+                    background-color: $ysw-color-price-table-blue;
+                    color: $ysw-white-color;
+                    font-family: $ysw-headings-font;
+                    font-weight: 700;
+                    padding: remCalc(10px 10px);
+                    text-transform: uppercase;
+
+                    svg {
+                        fill: $ysw-white-color;
+                        height: remCalc(20px);
+                        stroke: $ysw-white-color;
+                        stroke-width: remCalc(16px);
+                        width: remCalc(20px);
+                    }
+                }
+            }
+
+            .NumberOfPanel {
+                max-width: remCalc(175px);
+                width: 100%;
+
+                .panelsInput {
+                    width: 100%;
+                }
+            }
+
+            &__wrapper {
+                column-gap: remCalc(20px);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .coversSF-wrapper {
+                min-width: remCalc(110px);
+
+                > div {
+                    margin-bottom: remCalc(8px);
+                }
+
+                p {
+                    color: $ysw-text-base-color;
+                    font-family: $ysw-body-font;
+                    font-size: remCalc(13px);
+                    font-weight: 400;
+                    line-height: 1;
+                    margin-bottom: 0;
+                    text-transform: uppercase;
+                }
+
+                .coversSF {
+                    p {
+                        line-height: 1.1;
+                        margin-bottom: 0;
+                        margin-top: remCalc(3px);
+                    }
+
+                    span {
+                        color: $ysw-covers-sf-color;
+                        font-family: $ysw-headings-font;
+                        font-size: remCalc(22px);
+                        font-weight: 800;
+                        line-height: 1;
+                    }
+                }
+
+                .pricePerPanel {
+                    .price {
+                        color: $ysw-timberwool-before-price-color;
+                        display: block;
+                        font-family: $ysw-headings-font;
+                        font-size: remCalc(22px);
+                        font-weight: 800;
+                        line-height: 1.1;
+                        position: relative;
+
+                        &--before {
+                            text-decoration: line-through;
+                        }
+
+                        &--after {
+                            color: $button--primary-backgroundColor;
+                        }
+                    }
+                }
+
+                .saveDiscount {
+                    .discPercent {
+                        color: $button--primary-backgroundColor;
+                        display: block;
+                        font-family: $ysw-headings-font;
+                        font-size: remCalc(22px);
+                        font-weight: 800;
+                        line-height: 1.1;
+                        position: relative;
+                    }
+                }
+            }
+        }
+
+        &-sample {
+            border-bottom: remCalc(2px) solid $ysw-grey-color--lightest;
+            margin-bottom: remCalc(20px);
+            padding-block: remCalc(5px 20px);
+
+            a {
+                font-family: $ysw-body-font;
+                font-size: remCalc(16px);
+                font-weight: 700;
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

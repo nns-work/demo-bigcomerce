@@ -1,0 +1,154 @@
+[data-content-region="our-customers-section"] {
+    .ysw-c-customers-says {
+        background-color: $ysw-white-color;
+    }
+}
+
+.ysw-c-customers-says {
+    margin: 0;
+    padding-bottom: remCalc(100px);
+    padding-top: remCalc(68px);
+
+    @include ysw-breakpoint("mobile") {
+        padding-bottom: remCalc(130px);
+    }
+
+    &__container {
+        &:not(.slick-initialized) {
+            display: flex;
+        }
+
+        .slick {
+            &-arrow {
+                margin-top: remCalc(50px);
+                top: 100%;
+            }
+
+            &-prev,
+            &-next {
+                align-items: center;
+                border: remCalc(3px) solid $ysw-blue-color;
+                border-radius: 50%;
+                color: $ysw-blue-color;
+                display: flex;
+                height: remCalc(52px);
+                justify-content: center;
+                width: remCalc(52px);
+
+                @include ysw-breakpoint-down("mobile") {
+                    display: flex !important; // override slick-arrow display: none;
+                }
+            }
+
+            &-prev,
+            &-next {
+                &::before {
+                    background-image: none !important;
+                    color: $ysw-blue-color;
+                    display: block;
+                    font-size: remCalc(57px);
+                    height: 100%;
+                    line-height: remCalc(18px);
+                    width: 100%;
+                }
+            }
+
+            &-prev {
+                left: 30%;
+
+                @include ysw-breakpoint("handheld") {
+                    left: 35%;
+                }
+
+                @include ysw-breakpoint("b-medium") {
+                    left: 40%;
+                }
+
+                @include ysw-breakpoint("mobile") {
+                    left: 43.5%;
+                }
+
+                &::before {
+                    content: "\2039";
+                }
+            }
+
+            &-next {
+                left: 55%;
+
+                @include ysw-breakpoint("handheld") {
+                    left: 56%;
+                }
+
+                @include ysw-breakpoint("b-medium") {
+                    left: 55%;
+                }
+
+                @include ysw-breakpoint("mobile") {
+                    left: 51%;
+                }
+
+                &::before {
+                    content: "\203A";
+                }
+            }
+
+            &-dots {
+                display: none !important;
+            }
+        }
+    }
+
+    &__title {
+        color: $ysw-blue-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(18px);
+        font-weight: 800;
+        line-height: 1;
+        margin: 0;
+        text-transform: uppercase;
+
+        @include ysw-breakpoint("handheld") {
+            font-size: remCalc(30px);
+        }
+
+        @include ysw-breakpoint("b-medium") {
+            font-size: remCalc(44px);
+        }
+    }
+
+    &__image {
+        height: remCalc(20px);
+        width: remCalc(150px);
+
+        @include ysw-breakpoint("handheld") {
+            height: remCalc(32px);
+            width: remCalc(236px);
+        }
+
+        @include ysw-breakpoint("b-medium") {
+            width: remCalc(236px);
+        }
+    }
+
+    &__card {
+        &-title {
+            color: $ysw-text-heading-color;
+            font-family: $ysw-headings-font;
+            font-weight: 800 !important; // override card-title font-weight
+        }
+
+        &-text {
+            color: $ysw-text-heading-color;
+            font-family: $ysw-headings-font;
+            font-weight: 300;
+        }
+
+        &-author {
+            font-family: $ysw-headings-font;
+            font-style: italic;
+            font-weight: 400;
+            margin-top: remCalc(11px) !important; // override card-subtitle margin-top
+        }
+    }
+}

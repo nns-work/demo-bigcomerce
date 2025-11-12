@@ -1,0 +1,86 @@
+.body {
+    .ysw-steps-section {
+        padding-inline: remCalc(24px);
+
+        &__heading {
+            color: $ysw-white-color;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(22px);
+            font-weight: 700;
+            margin-bottom: remCalc(20px);
+            text-align: center;
+
+            @include ysw-breakpoint("b-small") {
+                font-size: remCalc(30px);
+            }
+
+            @include ysw-breakpoint("b-medium") {
+                font-size: remCalc(42px);
+            }
+
+            &--blue {
+                color: $ysw-heading-color;
+            }
+        }
+
+        &__subtext {
+            color: $ysw-white-color;
+            font-family: $ysw-body-font;
+            font-size: remCalc(15px);
+            font-weight: 400;
+            text-align: center;
+
+            &--blue {
+                color: $ysw-heading-color;
+            }
+        }
+
+        &__container,
+        &__wrapper {
+            max-width: remCalc(970px);
+            padding-inline: 0;
+
+            @include ysw-breakpoint("mobile") {
+                padding-inline: remCalc(15px);
+            }
+        }
+
+        &__col {
+            padding: 0;
+            width: 100%;
+
+            @include ysw-breakpoint("b-large") {
+                padding-inline: remCalc(15px);
+                width: 33.3%;
+            }
+
+            &:first-of-type {
+                padding-left: 0;
+                padding-right: 0;
+
+                @include ysw-breakpoint("b-large") {
+                    padding-right: remCalc(15px);
+                }
+            }
+
+            &:last-of-type {
+                padding-left: 0;
+                padding-right: 0;
+
+                @include ysw-breakpoint("b-large") {
+                    padding-left: remCalc(15px);
+                }
+            }
+        }
+
+        &__title {
+            margin-bottom: remCalc(15px);
+
+            span {
+                color: $ysw-white-color;
+                display: block;
+                text-transform: none;
+            }
+        }
+    }
+}
