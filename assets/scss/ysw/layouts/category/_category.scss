@@ -1,0 +1,166 @@
+@import "./category-view";
+@import "./category-header";
+@import "./category-description";
+@import "./category-sidebar";
+
+
+.body:not(.home) .page--category {
+  color: #000A12;
+  margin-top: 40px;
+
+  @include breakpoint("large") {
+    margin-top: 50px;
+  }
+
+  .show-mobile {
+    @include breakpoint("medium") {
+        display: none;
+    }
+  }
+
+  .show-desktop {
+    display: none;
+
+    @include breakpoint("medium") {
+        display: block;
+    }
+  }
+
+    .page-sidebar{
+        margin-top: 18px;
+        padding: 0;
+
+        @include breakpoint("medium") {
+            margin-top: 0;
+            padding: 0 15px 0 0;
+        }
+    }
+
+    .page-content{padding: 0;}
+
+    .page-sidebar + .page-content{
+        @include breakpoint("medium") {
+            padding: 0 0 0 15px;
+        }
+    }
+
+  .page-heading {
+      color: inherit;
+      font-family: $fontFamily-montserrat;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 12px;
+      text-transform: none;
+
+      @include breakpoint("small") {
+          font-size: 32px;
+          margin-bottom: 18px;
+      }
+  }
+
+  .page-description {
+      font-size: 15px;
+      line-height: 1.4;
+      margin-bottom: 0;
+
+      @include breakpoint("small") {
+          font-size: 18px;
+          line-height: 1.3;
+      }
+
+        @include breakpoint("medium") {
+            margin-bottom: 30px;
+        }
+
+      span {
+          font-size: inherit !important;
+      }
+  }
+
+  .addReadMore.showlesscontent .secondSection,
+  .addReadMore.showlesscontent .readLess {
+      display: none;
+  }
+
+  .addReadMore.showlesscontent .readMore {
+      display: inline;
+  }
+
+  .addReadMore.showmorecontent .readMore {
+      display: none;
+  }
+
+  .addReadMore.showmorecontent .readLess {
+      display: inline;
+  }
+
+  .addReadMore .readMore,
+  .addReadMore .readLess {
+      color: $color-brand;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 2px;
+  }
+
+  .addReadMoreWrapTxt.showmorecontent .SecSec,
+  .addReadMoreWrapTxt.showmorecontent .readLess {
+      display: block;
+  }
+
+  .actionBar-section .form-field {
+      border: 0;
+      color: #000A12;
+      font-size: 14px;
+
+      .form-label {
+          font-size: inherit;
+          font-weight: 600;
+      }
+
+      .form-select {
+          background-position: right 0 top .5rem;
+          color: inherit;
+          font-size: inherit;
+          padding-right: 18px;
+      }
+  }
+
+
+  .card-title {
+      > a {
+          color: #000;
+          font-size: 18px;
+      }
+  }
+
+  .card-details {
+      p:empty {
+          display: none;
+      }
+  }
+
+  .card-text {
+      color: #000;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 4px;
+  }
+
+  .productGrid .product {
+      @include breakpoint("medium") {
+          margin-bottom: 90px;
+      }
+  }
+
+  .productGrid .card-body .button {
+      background: #f5f5f5;
+      color: #000;
+      margin-top: 9px;
+
+      &:hover,
+      &:focus {
+          background: darken(#f5f5f5, 10%);
+      }
+  }
+}

@@ -1,0 +1,99 @@
+.ysw-c-categories {
+    background-color: $ysw-grey-color--lightest;
+    padding: 0 5%;
+
+    &-title {
+        color: $ysw-blue-color;
+        font-size: remCalc(44px);
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: remCalc(25px);
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .container {
+        column-gap: remCalc(15px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        max-width: remCalc(1260px);
+        padding: remCalc(40px 0 50px);
+        row-gap: remCalc(20px);
+    }
+
+    &__wrapper {
+        background: $ysw-white-color;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: remCalc(85px 40px 40px);
+        text-align: center;
+
+        @include ysw-breakpoint("b-medium") {
+            padding-top: remCalc(75px);
+        }
+
+        @include ysw-breakpoint("mobile") {
+            padding-top: remCalc(65px);
+        }
+    }
+
+    &__card {
+        margin-top: remCalc(75px);
+        position: relative;
+        width: 100%;
+
+        @include ysw-breakpoint("b-medium") {
+            width: calc(50% - 10px);
+        }
+
+        @include ysw-breakpoint("mobile") {
+            width: calc(33.3% - 10px);
+        }
+
+        &-icon {
+            border: remCalc(8px) $ysw-white-color solid;
+            border-radius: 50%;
+            left: 50%;
+            position: absolute;
+            top: -13%;
+            transform: translateX(-50%);
+            width: remCalc(115px);
+        }
+
+        &-title {
+            color: $ysw-blue-color--darker;
+            font-size: remCalc(20px);
+            font-weight: 800;
+            margin: 0;
+            margin-bottom: remCalc(15px);
+            text-transform: none;
+        }
+
+        &-text {
+            color: $ysw-blue-color--darker;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(16px);
+            font-weight: 300;
+        }
+
+        &-button {
+            background-color: $ysw-blue-color;
+            border: remCalc(5px) solid $ysw-blue-color--light;
+            color: $ysw-white-color;
+            display: block;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(16px);
+            font-weight: 700;
+            margin: auto;
+            margin-bottom: 0;
+            padding: remCalc(10px);
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: remCalc(160px);
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.ysw-c-bottom-banner {
+    background-color: $ysw-blue-color;
+    display: none;
+    padding-block: remCalc(40px);
+
+    @include ysw-breakpoint("product-view") {
+        display: block;
+    }
+
+    &__list {
+        display: grid;
+        gap: remCalc(30px);
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        list-style: none;
+        margin: 0;
+
+        @include ysw-breakpoint("b-large") {
+            display: flex;
+        }
+    }
+
+    &__item {
+        .icon {
+            height: remCalc(50px);
+            width: remCalc(50px);
+        }
+
+        &-title {
+            color: $ysw-color-search-magic-bar-blue;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(18px);
+            font-weight: 900;
+            margin-block: remCalc(5px 0);
+        }
+
+        &-text {
+            color: $ysw-white-color;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(16px);
+            font-weight: 500;
+            line-height: 1;
+            margin: 0;
+            text-decoration: none;
+
+            &:is(a:hover, a:focus) {
+                color: $ysw-white-color;
+                text-decoration: underline;
+            }
+
+            span {
+                @include ysw-breakpoint("b-large") {
+                    display: block;
+                }
+            }
+        }
+    }
+}

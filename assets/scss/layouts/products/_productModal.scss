@@ -1,0 +1,288 @@
+// Product Modal
+
+body.secondskinaudio4076.has-activeModal {
+  overflow: visible;
+}
+body.secondskinaudio4076{
+padding-top: 0 !important; 
+}
+body.secondskinaudio4076 #previewModal {
+  position: relative;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  width: calc(100% - 200px);
+  max-height: 100%;
+  max-width: 1360px;
+  left: 0;
+  top: 0!important;
+  z-index: 0;
+  border: 2px solid #00430d;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+body.secondskinaudio4076  #previewModal .modal-header h2.modal-header-title {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+body.secondskinaudio4076 #previewModal .modal-header {
+  padding-left: 1.5rem;
+  padding-right: 0;
+}
+
+body.secondskinaudio4076 #previewModal .modal-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.secondskinaudio4076 #previewModal .modal-body {
+  max-height: none !important;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+body.secondskinaudio4076 #previewModal .modal-body .previewCart {
+  width: 100%;
+  max-width: 100%;
+}
+
+body.secondskinaudio4076 #previewModal .previewCart .productView figure.productView-image {
+  width: 100%;
+  margin: 0;
+  display: block;
+  min-height: 0;
+  max-width: 250px;
+}
+
+body.secondskinaudio4076 #previewModal .previewCart .productView .productView-details {
+  width: calc(100% - 260px);
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+body.secondskinaudio4076 #previewModal .previewCart .productView-details .productView-price {
+  margin-bottom: 0;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout {
+  background: transparent;
+  padding: 0;
+  position: absolute;
+  right: 1.5rem;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout .previewCartCheckout-subtotal,
+body.secondskinaudio4076 #previewModal section.previewCartCheckout .previewCartCheckout-subtotal+p,
+body.secondskinaudio4076 #previewModal section.previewCartCheckout .previewCartCheckout-subtotal+p+a.button.button--primary,
+body.secondskinaudio4076 #previewModal ul.productGrid li.product:nth-child(3)~li.product {
+  display: none;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout .previewCartCheckout-additionalCheckoutButtons {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout .previewCartCheckout-additionalCheckoutButtons:before,
+body.secondskinaudio4076 #previewModal section.previewCartCheckout .previewCartCheckout-additionalCheckoutButtons:after {
+  content: none;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout .previewCartCheckout-additionalCheckoutButtons .AmazonPayCheckout,
+body.secondskinaudio4076 #previewModal section.previewCartCheckout .previewCartCheckout-additionalCheckoutButtons .GooglePayCheckout,
+body.secondskinaudio4076 #previewModal ul.productGrid li.product figcaption.card-figcaption {
+  display: none;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout .paypalCommerce-smart-buttons {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout a.button[href="/cart.php"] {
+  margin: 0;
+  color: transparent;
+  position: relative;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout>a.button.button--primary {
+  color: transparent;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout>a.button.button--primary:before {
+  content: "Checkout now";
+  font-size: 14px;
+  line-height: 1rem;
+  display: block;
+  position: absolute;
+  left: 50%;
+  color: #ffffff;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+body.secondskinaudio4076 #previewModal section.previewCartCheckout a.button[href="/cart.php"]:after {
+  content: "View Cart";
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+body.secondskinaudio4076 #previewModal ul.productGrid {
+  margin: 2rem 0 0;
+  padding: 2rem .75rem .75rem;
+  position: relative;
+  border-top: 1px solid #ededed;
+}
+
+body.secondskinaudio4076 #previewModal ul.productGrid:before {
+  content: 'How About Taking These with you too?';
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+  visibility: visible;
+  font-size: 16px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: #909090;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #ffffff;
+}
+
+body.secondskinaudio4076 #previewModal ul.productGrid li.product {
+  -ms-flex: 0 1 33.333%;
+  -webkit-box-flex: 0;
+  flex: 0 1 33.333%;
+  max-width: 33.333%;
+  width: 33.333%;
+}
+
+body.secondskinaudio4076 #previewModal ul.productGrid li.product article.card {
+  display: block;
+}
+
+body.secondskinaudio4076 #previewModal ul.productGrid li.product article.card figure.card-figure {
+  width: 31%;
+  max-width: 31%;
+  display: block;
+  float: left;
+  height: auto;
+}
+
+body.secondskinaudio4076 #previewModal ul.productGrid li.product article.card .card-body {
+  float: left;
+  width: 69%;
+  height: auto;
+  display: block;
+  padding: 0 0 0 1rem;
+}
+
+body.secondskinaudio4076 #previewModal ul.productGrid li.product article.card .card-body a.button.card-figcaption-button {
+  display: inline-block;
+  color: transparent;
+  position: relative;
+  min-width: 188px;
+  padding: 10px 0;
+  text-transform: none;
+  font-weight: 500;
+}
+
+body.secondskinaudio4076 #previewModal ul.productGrid li.product article.card .card-body a.button.card-figcaption-button:after {
+  content: "View Product";
+  position: absolute;
+  color: #ffffff;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+@media(max-width: 1200px) {
+  body.secondskinaudio4076 #previewModal {
+     width: calc(100% - 2rem);
+     max-width: 980px;
+  }
+  body.secondskinaudio4076 #previewModal ul.productGrid li.product article.card .card-body a.button.card-figcaption-button {
+     min-width: 120px;
+  }
+}
+
+@media(max-width: 800px) {
+  body.secondskinaudio4076 #previewModal ul.productGrid li.product {
+     -ms-flex: 0 1 100%;
+     -webkit-box-flex: 0;
+     flex: 0 1 100%;
+     max-width: 100%;
+     width: 100%;
+     margin-bottom: 10px;
+  }
+  body.secondskinaudio4076 #previewModal .modal-body {
+     padding-top: 0.5rem;
+     padding-bottom: 0.5rem;
+     padding-left: 1rem;
+     padding-right: 1rem;
+     overflow: visible;
+  }
+  body.secondskinaudio4076 #previewModal .previewCart .productView figure.productView-image {
+     float: left;
+     width: 30%;
+     margin-right: 15px !important;
+     margin-bottom: 7px !important;
+  }
+  body.secondskinaudio4076 #previewModal section.previewCartCheckout {
+     position: static;
+  }
+  body.secondskinaudio4076 #previewModal .modal-body .previewCart {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: reverse;
+     -ms-flex-direction: column-reverse;
+     flex-direction: column-reverse;
+  }
+  body.secondskinaudio4076 #previewModal .modal-body .previewCart section.productView {
+     margin: 0;
+  }
+  body.secondskinaudio4076 #previewModal .previewCart .productView .productView-details {
+     width: 70%;
+  }
+   body.secondskinaudio4076 #previewModal .modal-header{
+     padding-left: 1rem;
+        padding-right: 2rem;
+   }
+  body.secondskinaudio4076 #previewModal > a.modal-close {
+       right: 2px;
+       top: 10px;
+   }
+  body.secondskinaudio4076 #previewModal .modal-header h2.modal-header-title {
+       font-size: 14px;
+   }
+  body.secondskinaudio4076 #previewModal ul.productGrid{
+         padding: 2.5rem 0 0.75rem;
+        border-top: none;
+   }
+}

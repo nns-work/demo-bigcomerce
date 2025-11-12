@@ -1,0 +1,147 @@
+// Colors
+// -----------------------------------------------------------------------------
+
+$ysw-primary-color: stencilColor("color-primary");
+$ysw-primary-color--dark: stencilColor("color-primaryDark");
+$ysw-primary-color--darker: stencilColor("color-primaryDarker");
+$ysw-primary-color--light: stencilColor("color-primaryLight");
+$ysw-primary-color--lighter: stencilColor("color-primaryLighter");
+
+$ysw-secondary-color: stencilColor("color-secondary");
+$ysw-secondary-color--dark: stencilColor("color-secondaryDark");
+$ysw-secondary-color--darker: stencilColor("color-secondaryDarker");
+$ysw-secondary-color--light: stencilColor("color-secondaryLight");
+$ysw-secondary-color--lighter: stencilColor("color-secondaryLighter");
+
+
+$ysw-black-color: #000;
+$ysw-white-color: stencilColor("color-white");
+$ysw-white-color--base: stencilColor("color-whitesBase");
+
+// Grey Colors
+
+$ysw-grey-color: stencilColor("color-grey");
+$ysw-grey-color--dark: stencilColor("color-greyDark");
+$ysw-grey-color--darker: stencilColor("color-greyDarker");
+$ysw-grey-color--darkest: stencilColor("color-greyDarkest");
+$ysw-grey-color--medium: stencilColor("color-greyMedium");
+$ysw-grey-color--light: stencilColor("color-greyLight");
+$ysw-grey-color--lighter: stencilColor("color-greyLighter");
+$ysw-grey-color--lightest: stencilColor("color-greyLightest");
+
+// Navigation Colors
+
+$ysw-nav-pages-color: stencilColor("navPages-color");
+$ysw-nav-pages-color--hover: stencilColor("navPages-color-hover");
+$ysw-nav-pages-color--background: stencilColor("navPages-backgroundColor");
+$ysw-nav-pages-color--submenu: stencilColor("navPages-subMenu-backgroundColor");
+$ysw-nav-pages-color--submenu-sep: stencilColor("navPages-subMenu-separatorColor");
+
+// Text Colors
+
+$ysw-text-base-color: stencilColor("color-textBase");
+$ysw-text-base-color--hover: stencilColor("color-textBase--hover");
+$ysw-text-base-color--active: stencilColor("color-textBase--active");
+
+$ysw-text-secondary: stencilColor("color-textSecondary");
+$ysw-text-secondary--hover: stencilColor("color-textSecondary--hover");
+$ysw-text-secondary--active: stencilColor("color-textSecondary--active");
+
+$ysw-text-link-color: stencilColor("color-textLink");
+$ysw-text-link-color--hover: stencilColor("color-textLink--hover");
+$ysw-text-link-color--active: stencilColor("color-textLink--active");
+
+$ysw-text-heading-color: stencilColor("color-textHeading");
+
+// Alert Colors
+
+$ysw-alert-error-color: stencilColor("color-error");
+$ysw-alert-error-colo--light: stencilColor("color-errorLight");
+$ysw-alert-info-color: stencilColor("color-info");
+$ysw-alert-info-color--light: stencilColor("color-infoLight");
+$ysw-alert-success-color: stencilColor("color-success");
+$ysw-alert-success-color--light: stencilColor("color-successLight");
+$ysw-alert-warning-color: stencilColor("color-warning");
+$ysw-alert-warning-color--light: stencilColor("color-warningLight");
+
+// Layout Colors
+
+$ysw-body-background-color: stencilColor("body-bg");
+$ysw-header-background-color: stencilColor("header-backgroundColor");
+$ysw-footer-background-color: stencilColor("footer-backgroundColor");
+$ysw-border-color: $ysw-grey-color--light;
+$ysw-border-color--dark: #6a6e6c;
+
+// YSW top bar colgroup
+$ysw-color-top-banner-background: stencilColor("ysw-top-banner-background");
+$ysw-color-top-banner-color: stencilColor("ysw-top-banner-color");
+
+// YSW Custom Colors
+
+$ysw-blue-color: #0077c3;
+$ysw-blue-color--dark: #004c8c;
+$ysw-blue-color-dark-mid: #37474f;
+$ysw-blue-color--darker: #3a4b54;
+$ysw-blue-color--light: #2090d8;
+$ysw-blue-color--lighter: #5eb8ff;
+$ysw-blue-color--lightest: #5eb8ff;
+$ysw-hero-banner-text-color: #bfc0c0;
+$ysw-border-color: #dcdcdc;
+$ysw-input-placeholder-color: #838383;
+$ysw-input-border-color: #e1e1e1;
+$ysw-button-background-color: #002f6c;
+$ysw-button-border-color: #58a5f0;
+$ysw-endorse-title-color: #b3b3b3;
+$ysw-tab-content-item-border-color: #cfcfcf;
+$ysw-tab-content-image-outline-color: rgba(255, 255, 255, 0.7);
+$ysw-heading-color: #28343a;
+$ysw-article-background-color: rgba(0, 0, 0, 0.05);
+$ysw-title-and-text-table-heading-background: linear-gradient(129deg, $ysw-text-heading-color 0%, #030e13 100%);
+$ysw-title-and-text-table-odd-background: #dce8ef;
+$ysw-title-and-text-table-even-background: #b8d5e6;
+$ysw-common-uses-color: #f2f3f3;
+$ysw-westcoast-gradient-color: radial-gradient(circle, $ysw-white-color 20%, #c5c5c5 80%);
+$ysw-red-color: #b30007;
+$ysw-red-color--base: #f00;
+$ysw-title-and-text-table-heading-background: linear-gradient(129deg, $ysw-text-heading-color 0%, #030e13 100%);
+$ysw-title-and-text-table-odd-background: #dce8ef;
+$ysw-title-and-text-table-even-background: #b8d5e6;
+$ysw-fall-color: #cd451c;
+$ysw-color-header-border: #e0e0e0;
+$ysw-color-navigation-dropdown: #fff;
+$ysw-color-price-was: #6a757b;
+$ysw-color-price-table-blue: #2f77b8;
+$ysw-color-price-table-blue--dark: #3a474f;
+$ysw-color-price-table-gray: #dadce0;
+$ysw-color-price-table-gray--light: #f4f4f4;
+$ysw-color-price-table-gray--medium: #dddd;
+$ysw-color-price-table-gray--dark: #758791;
+$ysw-color-top-bar-message: #a9acae;
+$ysw-color-form-increment: #d8d8d8;
+$ysw-color-damplier-graphic-border: #515b61;
+$ysw-color-damplier-graphic-item-1: #2b7dc0;
+$ysw-color-damplier-graphic-item-2: #953993;
+$ysw-color-damplier-graphic-item-3: #f1623b;
+$ysw-color-damplier-graphic-item-4: #47b754;
+$ysw-covers-sf-color: #748690;
+$ysw-timberwool-before-price-color: #cecece;
+$ysw-timberwool-sample-modal-background-1-color: #dbdce0;
+$ysw-timberwool-sample-modal-background-2-color: #fff;
+$ysw-timberwool-sample-modal-title-color: #36474f;
+$ysw-color-dots-mobile: #d3d3d3;
+$ysw-color-dots-mobile--active: #707070;
+$ysw-color-search-magic-bar-blue: #00326a;
+$ysw-color-search-magic-bar-blue--light: #0078b9;
+$ysw-color-search-magic-bar-blue--lighter: #455f88;
+$ysw-color-search-magic-bar-placeholder: #758690;
+$ysw-color-search-magic-bar-button: #2a3339;
+$ysw-color-generic-calculation-option-background: rgba(2, 119, 189, 0.1);
+$ysw-color-generic-calculation-add-to-cart-hover: #0397ef;
+$ysw-color-new-btn-primary: #014c8d;
+$ysw-color-new-btn-primary--disabled: #4d6574;
+$ysw-color-skeleton: #d9d9d9;
+$ysw-color-skeleton--light: #f2f2f2;
+$ysw-color-accordion-border: #f0f0f0;
+$ysw-color-accordion-content: #e0e0e0;
+$ysw-color-accordion-icon-gradient: linear-gradient(to bottom, $ysw-white-color, #e2e2e2);
+$ysw-color-accordion-icon-gradient--light: linear-gradient(to bottom, $ysw-white-color, #d7d7d7);

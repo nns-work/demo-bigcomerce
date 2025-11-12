@@ -1,0 +1,65 @@
+.cart-page {
+    .shipping-estimator {
+        dl {
+            overflow: visible;
+        }
+    }
+
+    .cart-actions::after {
+        content: "or use";
+        display: block;
+        font-size: remCalc(16px);
+        line-height: 1;
+        padding-top: remCalc(20px);
+        text-align: center;
+    }
+
+    .amazonpay-button-container {
+        margin: 0 auto !important; // Override the iframe styles
+        max-width: none !important; // Override the inline style
+    }
+
+    .cart-additionalCheckoutButtons {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: remCalc(30px);
+
+        &::before {
+            content: "Express Checkout";
+            font-size: remCalc(20px);
+            top: (-(remCalc(11px)));
+            width: remCalc(190px);
+        }
+    }
+
+    .CheckoutButton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        div,
+        .paypal-button-container,
+        * {
+            margin-inline: auto;
+            max-width: remCalc(248px) !important; // Override the inline style
+            min-width: remCalc(248px) !important; // Override the inline style
+        }
+
+        .or-use-label {
+            text-align: center;
+        }
+    }
+
+    .paypal-button-container {
+        max-width: none !important; // Override the inline style
+        max-width: remCalc(248px) !important; // Override the inline style
+        width: 100% !important; // Override the inline style
+    }
+}
+
+.CheckoutButton {
+    .or-use-label {
+        display: none !important; // Override the inline style
+    }
+}

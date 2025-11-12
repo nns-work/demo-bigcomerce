@@ -1,0 +1,315 @@
+.productView--price-table {
+    .productView-product {
+        &__footage {
+            display: flex;
+            gap: remCalc(15px);
+            padding-block: remCalc(0 15px);
+
+            @include ysw-breakpoint-down("small") {
+                flex-direction: column;
+            }
+
+            label {
+                color: $ysw-black-color;
+                display: block;
+                font-family: $ysw-headings-font;
+                font-size: remCalc(12px);
+                font-weight: 500;
+                line-height: 1;
+                margin-bottom: remCalc(10px);
+                text-align: left;
+                text-transform: uppercase;
+
+                &::after {
+                    content: ":";
+                }
+            }
+
+            input#squareFootage,
+            input#numberOfPanels {
+                border: remCalc(5px) solid $ysw-color-price-table-gray;
+                color: $ysw-black-color;
+                font-family: $ysw-headings-font;
+                font-size: remCalc(14px);
+                font-weight: 400;
+                padding: remCalc(5px 8px);
+                width: 100%;
+
+                &::placeholder {
+                    font-family: $ysw-headings-font;
+                }
+            }
+
+            .changePanelNumbers {
+                background-color: transparent;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0;
+                padding: remCalc(3px);
+                right: 0;
+                top: 0;
+
+                a {
+                    align-items: center;
+                    background: none !important; // override style from html
+                    display: flex !important; // override style from html
+                    font-weight: 700;
+                    height: remCalc(10px) !important; // override style from html
+                    justify-content: center;
+                    text-align: center;
+                    width: remCalc(5px);
+
+                    .icon {
+                        fill: $ysw-color-price-table-blue;
+                        height: remCalc(12px);
+                        stroke: $ysw-color-price-table-blue;
+                        stroke-width: 50;
+                        width: remCalc(12px);
+                    }
+                }
+            }
+
+            .NumberOfPanel {
+                margin-bottom: 0;
+            }
+
+            .numberOfPanels {
+                display: flex;
+                flex-direction: column;
+                width: min-content;
+
+                .panelsInput {
+                    width: remCalc(270px);
+
+                    @include ysw-breakpoint("small") {
+                        width: remCalc(195px);
+                    }
+                }
+
+                .coversSF {
+                    color: $ysw-color-price-table-gray--dark;
+                    font-size: remCalc(14px);
+                    font-weight: 700;
+                    line-height: 1;
+                    margin-left: 0;
+                    margin-top: remCalc(5px);
+                    text-transform: uppercase;
+                }
+            }
+
+            button {
+                background-color: $ysw-color-price-table-blue;
+                padding: remCalc(5px 10px);
+
+                .icon {
+                    fill: $ysw-white-color;
+                    height: remCalc(20px);
+                    stroke: $ysw-white-color;
+                    stroke-width: remCalc(15px);
+                    width: remCalc(20px);
+                }
+            }
+
+        }
+    }
+
+    .productView-options {
+        margin-top: 0;
+        padding-block: remCalc(0 15px);
+
+        [data-product-option-change] {
+            border-bottom: remCalc(1px) solid $ysw-color-price-table-gray--medium;
+        }
+
+        .form-label {
+            color: $ysw-black-color;
+            display: block;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(12px);
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: remCalc(10px);
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        .form-option {
+            border: remCalc(5px) solid $ysw-color-price-table-gray;
+            margin-right: remCalc(10px);
+
+            &-variant {
+                color: $ysw-color-price-table-blue--dark;
+                font-family: $ysw-headings-font;
+                font-size: remCalc(14px);
+                font-weight: bold;
+                min-width: remCalc(30px);
+                padding: remCalc(5px 0);
+            }
+        }
+
+        .form-radio:checked+.form-option {
+            border: remCalc(5px) solid $ysw-color-price-table-blue;
+            box-shadow: none;
+        }
+
+        table {
+            width: 100%;
+
+            thead {
+                display: none;
+
+                td {
+                    padding-top: remCalc(20px);
+                }
+            }
+
+            tbody {
+                tr {
+                    border-bottom: remCalc(1px) dotted $ysw-color-price-table-gray;
+
+                    &:last-child {
+                        border-bottom-style: solid;
+                    }
+
+                    &:not(:first-child) {
+                        display: none;
+                    }
+                }
+
+                td {
+                    max-height: remCalc(75px);
+                    min-height: remCalc(75px);
+                    padding-block: remCalc(15px);
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        .title {
+            color: $ysw-black-color;
+            display: block;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(14px);
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 0;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        .prices-section {
+            padding-block: remCalc(0 30px);
+
+            .saveDiscount {
+                position: initial;
+
+                span {
+                    color: $ysw-color-price-table-blue;
+                    font-weight: 700;
+                }
+            }
+
+            .productView-price {
+                display: block;
+                margin-left: 0;
+                width: auto;
+
+                @include ysw-breakpoint("small") {
+                    min-width: remCalc(175px);
+                }
+
+                &--total-savings {
+                    .price-section span,
+                    .text {
+                        color: $ysw-color-price-table-blue;
+                    }
+                }
+            }
+
+            .price-section {
+                color: $ysw-color-price-table-blue--dark;
+                display: flex;
+                font-family: $ysw-headings-font;
+                text-align: left;
+                width: auto;
+
+                span {
+                    font-size: remCalc(14px);
+                    font-weight: 800;
+                }
+
+                .price {
+                    font-size: remCalc(28px);
+                    line-height: 1;
+                    margin-right: remCalc(5px);
+                }
+            }
+
+            .text {
+                color: $ysw-color-price-table-blue--dark;
+                font-family: $ysw-headings-font;
+                font-size: remCalc(12px);
+                font-weight: 800;
+                margin: 0;
+                text-align: left;
+                text-transform: uppercase;
+            }
+
+            .icons {
+                align-items: center;
+                display: flex;
+                margin-inline: remCalc(5px 30px);
+                mask-image: linear-gradient(to right, $ysw-black-color 25%, transparent 100%);
+
+                visibility: hidden;
+
+                &--total-savings {
+                    mask-image: none;
+                }
+            }
+
+            .icon {
+                fill: $ysw-color-price-table-blue--dark;
+                height: remCalc(25px);
+                stroke: $ysw-color-price-table-blue--dark;
+                stroke-width: 40;
+
+                &:not(:first-child) {
+                    margin-left: (-(remCalc(5px)));
+                }
+            }
+        }
+
+        .discount-wrapper {
+            background-image: linear-gradient(to bottom, $ysw-color-price-table-gray, $ysw-color-price-table-gray--light);
+            color: $ysw-white-color;
+            display: none;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(14px);
+            font-weight: 800;
+            line-height: 1;
+            max-width: remCalc(165px);
+            padding: remCalc(8px);
+            text-align: left;
+            text-transform: uppercase;
+            width: fit-content;
+
+            &__text {
+                display: flex;
+                flex-wrap: wrap;
+                font-size: remCalc(28px);
+                margin: 0;
+            }
+
+            .symbol {
+                font-size: remCalc(18px);
+            }
+
+            .block {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}

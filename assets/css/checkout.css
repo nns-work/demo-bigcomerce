@@ -1,0 +1,20 @@
+#share-product,
+#SimilarMultiProductsByCustomerViews {
+  display: none;
+}
+
+.main > .inner {
+  position: relative;
+}
+
+.checkout-banner {
+  bottom: 0;
+  border: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.checkout-banner a {
+  font-weight: bold;
+}
+/*# sourceMappingURL=checkout.css.map */

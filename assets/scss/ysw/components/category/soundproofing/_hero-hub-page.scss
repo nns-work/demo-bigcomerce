@@ -1,0 +1,35 @@
+.body {
+    .ysw-hero-hub-page {
+        align-items: center;
+        background-position: center center;
+        display: flex;
+        height: remCalc(385px);
+        padding-inline: remCalc(24px);
+
+        &__container {
+            max-width: remCalc(970px);
+            padding-inline: 0;
+
+            @include ysw-breakpoint("mobile") {
+                padding-inline: remCalc(15px);
+            }
+        }
+
+        &__title {
+            color: $ysw-white-color;
+            font-family: $ysw-headings-font;
+            font-weight: 700;
+            text-align: center;
+
+            @include ysw-breakpoint("b-medium") {
+                font-size: remCalc(36px);
+            }
+        }
+
+        &__button {
+            line-height: 1;
+            margin: 0;
+            padding: remCalc(12px 25px);
+        }
+    }
+}

@@ -1,0 +1,425 @@
+.quickView {
+    .productView {
+        &--quickView {
+            .productView-images {
+                @include ysw-breakpoint("product-view") {
+                    width: 50% !important; // override important
+                }
+            }
+
+            .productView-details {
+                margin: 0;
+
+                @include ysw-breakpoint("product-view") {
+                    margin: 0 remCalc(20px);
+                    width: 45% !important; // override important
+                }
+
+                .sidebarbox {
+                    box-shadow: none;
+                    position: inherit;
+                    width: 100%;
+
+                    .form-action.buy-buttons {
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.productView {
+    &-images {
+        padding-inline: remCalc(30px);
+        position: relative;
+
+        @include ysw-breakpoint-down("medium") {
+            float: none;
+            margin: 0 auto;
+            max-width: remCalc(500px);
+            padding-inline: remCalc(40px);
+            position: relative;
+            width: 100%;
+        }
+
+        .slideBtnWrap {
+            display: block;
+
+            .slideBtn {
+                cursor: pointer;
+                left: (-(remCalc(15px)));
+                padding: 0;
+                position: absolute;
+                top: 40%;
+                transform: translateY(-40%);
+                width: remCalc(20px);
+
+                @include ysw-breakpoint-down("product-view") {
+                    left: (-(remCalc(16px)));
+                    padding: remCalc(5px);
+                    top: 40%;
+                    transform: translateY(-40%);
+                    width: remCalc(26px);
+                }
+
+                &.slideNextBtn {
+                    cursor: pointer;
+                    left: auto;
+                    right: (-(remCalc(15px)));
+
+                    @include ysw-breakpoint-down("product-view") {
+                        right: (-(remCalc(16px)));
+                        width: remCalc(26px);
+                    }
+                }
+
+                .icon {
+                    height: remCalc(50px);
+                    width: remCalc(50px);
+                }
+
+                &.slidePrevBtn .icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &-image {
+        border: remCalc(1px) solid $ysw-common-uses-color;
+        margin-bottom: remCalc(15px);
+    }
+
+    // All the importants below are to override the html template styles
+    // and the way these styles were applied is to force them to the different templates
+    &-thumbnails {
+        visibility: hidden;
+
+        @include ysw-breakpoint-down("product-view") {
+            display: flex !important;
+            justify-content: center;
+            list-style: none !important;
+            margin: remCalc(30px) auto !important;
+            padding: 0 !important;
+            text-align: center !important;
+            width: 100% !important;
+        }
+
+        &:not(.slick-initialized) {
+            @include ysw-breakpoint("product-view") {
+                display: flex;
+                justify-content: center;
+
+                > li:nth-child(n + 6) {
+                    display: none;
+                }
+            }
+        }
+
+        .slick-list {
+            margin: 0;
+        }
+    }
+
+    &-thumbnail {
+        @include ysw-breakpoint-down("product-view") {
+            padding-inline: remCalc(5px) !important;
+        }
+
+        &--space {
+            @include ysw-breakpoint-down("product-view") {
+                padding-inline: remCalc(10px) !important;
+            }
+        }
+
+        > a {
+            @include ysw-breakpoint-down("product-view") {
+                background: $ysw-color-dots-mobile !important;
+                border: 0 !important;
+                border-radius: 100% !important;
+                cursor: pointer !important;
+                display: inline-block !important;
+                height: remCalc(14px) !important;
+                width: remCalc(14px) !important;
+
+                &.is-active {
+                    background-color: $ysw-color-dots-mobile--active !important;
+                }
+            }
+        }
+    }
+
+    // Here ends the previous justification
+
+    &-free-shipping {
+        &-message {
+            margin-block: remCalc(10px);
+        }
+
+        &-details {
+            &.show {
+                position: absolute;
+                z-index: 10;
+
+                @include ysw-breakpoint-between("c-medium", "product-view") {
+                    left: 0;
+                }
+
+                &::before {
+                    @include ysw-breakpoint-between("c-medium", "product-view") {
+                        left: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.productView__description {
+    margin-top: remCalc(30px);
+}
+
+// All the importants below are to override the html template styles
+// and the way these styles were applied is to force them to the different templates
+
+.ysw-l-product-damplifier-pro,
+.ysw-l-product-vehicle-kits {
+    .productView-images {
+        @include ysw-breakpoint("medium") {
+            width: 38%;
+        }
+
+        @include ysw-breakpoint("mobile") {
+            width: 39%;
+        }
+
+        @include ysw-breakpoint("c-mobile") {
+            width: 40%;
+        }
+
+        @include ysw-breakpoint("product-view-large") {
+            width: 50% !important;
+        }
+    }
+
+    .productView .productView-details {
+        width: 95% !important;
+
+        @include ysw-breakpoint("medium") {
+            width: remCalc(440px) !important;
+        }
+
+        @include ysw-breakpoint("product-view") {
+            width: 36% !important;
+        }
+
+        @include ysw-breakpoint("mobile") {
+            width: 37% !important;
+        }
+
+        @include ysw-breakpoint("c-mobile") {
+            width: 40% !important;
+        }
+
+        .sidebarbox {
+            position: unset !important;
+            width: 100%;
+
+            @include ysw-breakpoint("medium") {
+                position: absolute !important;
+                right: (-(remCalc(280px))) !important;
+                width: remCalc(300px) !important;
+            }
+
+            @include ysw-breakpoint("product-view") {
+                right: -68% !important;
+                width: remCalc(270px) !important;
+            }
+
+            @include ysw-breakpoint("mobile") {
+                right: -66%;
+                width: remCalc(270px) !important;
+            }
+
+            @include ysw-breakpoint("c-mobile") {
+                right: -64%;
+            }
+
+            @include ysw-breakpoint("product-view-large") {
+                right: -65%;
+                width: remCalc(280px) !important;
+            }
+        }
+    }
+}
+
+.ysw-l-product-vehicle-kits {
+    .productView .productView-details {
+        .sidebarbox {
+            position: unset !important;
+            width: 100%;
+
+            @include ysw-breakpoint("medium") {
+                position: absolute !important;
+                right: (-(remCalc(280px))) !important;
+                width: remCalc(300px) !important;
+            }
+
+            @include ysw-breakpoint("product-view") {
+                right: -66% !important;
+                width: remCalc(270px) !important;
+            }
+
+            @include ysw-breakpoint("mobile") {
+                right: -62% !important;
+                width: remCalc(270px) !important;
+            }
+
+            @include ysw-breakpoint("c-mobile") {
+                right: -59% !important;
+            }
+
+            @include ysw-breakpoint("product-view-large") {
+                right: -63% !important;
+                width: remCalc(280px) !important;
+            }
+        }
+    }
+}
+
+.productView {
+    &--default {
+        .productView-images {
+            @include ysw-breakpoint("medium") {
+                width: 38%;
+            }
+
+            @include ysw-breakpoint("mobile") {
+                width: 39%;
+            }
+
+            @include ysw-breakpoint("c-mobile") {
+                width: 40%;
+            }
+
+            @include ysw-breakpoint("product-view-large") {
+                width: 46% !important;
+            }
+        }
+
+        .productView-details {
+            width: 95% !important;
+
+            @include ysw-breakpoint("product-view") {
+                width: 36% !important;
+            }
+
+            @include ysw-breakpoint("mobile") {
+                width: 37% !important;
+            }
+
+            @include ysw-breakpoint("c-mobile") {
+                width: 40% !important;
+            }
+
+            @include ysw-breakpoint("product-view-large") {
+                width: 40% !important;
+            }
+        }
+
+        .productView-details {
+            .sidebarbox,
+            .sidebar3933 {
+                @include ysw-breakpoint-down("product-view") {
+                    border: 0;
+                    box-shadow: none;
+                    padding: 0;
+                    position: unset !important;
+                    right: 0;
+                    width: 100%;
+                }
+
+                @include ysw-breakpoint("product-view") {
+                    right: -68% !important;
+                    width: remCalc(270px) !important;
+                }
+
+                @include ysw-breakpoint("mobile") {
+                    right: -66% !important;
+                    width: remCalc(255px) !important;
+                }
+
+                @include ysw-breakpoint("c-mobile") {
+                    right: -64% !important;
+                    width: remCalc(265px) !important;
+                }
+
+                @include ysw-breakpoint("product-view-large") {
+                    right: -68% !important;
+                    width: remCalc(280px) !important;
+                }
+            }
+        }
+    }
+
+    &--damplifier-half {
+        .productView-details {
+            width: 95% !important;
+
+            @include ysw-breakpoint("product-view") {
+                width: 34% !important;
+            }
+
+            @include ysw-breakpoint("mobile") {
+                width: 35% !important;
+            }
+
+            @include ysw-breakpoint("c-mobile") {
+                width: 35% !important;
+            }
+
+            @include ysw-breakpoint("product-view-large") {
+                width: 40% !important;
+            }
+
+            .sidebarbox,
+            .sidebar3933 {
+                @include ysw-breakpoint-down("product-view") {
+                    border: 0;
+                    box-shadow: none;
+                    padding: 0;
+                    position: unset !important;
+                    right: 0;
+                    width: 100%;
+                }
+
+                @include ysw-breakpoint("product-view") {
+                    right: -78% !important;
+                    width: remCalc(270px) !important;
+                }
+
+                @include ysw-breakpoint("mobile") {
+                    right: -75% !important;
+                    width: remCalc(270px) !important;
+                }
+
+                @include ysw-breakpoint("c-mobile") {
+                    right: -80% !important;
+                }
+
+                @include ysw-breakpoint("product-view-large") {
+                    right: -73% !important;
+                    width: remCalc(280px) !important;
+                }
+            }
+        }
+    }
+}
+
+// Here ends the previous justification
+
+.sidebarbox,
+.sidebar3933 {
+    background-color: $ysw-white-color;
+}

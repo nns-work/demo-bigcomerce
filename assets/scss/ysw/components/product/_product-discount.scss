@@ -1,0 +1,28 @@
+.productView--celluzorbe {
+    .productView-details {
+        .numberOfPanels {
+            position: relative;
+
+            .saveDiscount {
+                left: remCalc(160px);
+                position: relative;
+                top: (-(remCalc(14px)));
+
+                @media (min-width: 393px) {
+                    left: -(-(remCalc(7px)));
+                    top: 0;
+                }
+
+                @media (min-width: 1000px) {
+                    left: remCalc(152px);
+                    top: -(-(remCalc(10px)));
+                }
+
+                @media (min-width: 1250px) {
+                    left: -(-(remCalc(7px)));
+                    top: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,205 @@
+label.form-option {
+    padding: remCalc(5px 25px);
+}
+
+#productCartSuccessModal {
+    margin: 0;
+
+    .modal-body {
+        text-align: center;
+
+        .buttons-wrapper {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+            .button {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.form-extra {
+    border-top: 1px solid #dddd;
+    clear: both;
+    padding-top: 20px;
+    margin-top: 20px;
+
+    .btn-new {
+        font-weight: 500;
+        margin-left: 0;
+    }
+}
+
+.buy-button-quote__title {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.dimensionsRow__title {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.dimensionsRow__disclaimer {
+    color: #0277bd;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.dimensionsRow__size {
+    align-self: center;
+    color: #0277bd;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-left: 12px;
+
+    .size {
+        font-weight: 600;
+    }
+
+    .warning {
+        color: #0277bd;
+        display: none;
+        font-style: italic;
+        margin-top: 6px;
+
+        &.show {
+            display: block;
+
+            + .numberOfPanels__wrapper {
+                display: none;
+            }
+        }
+    }
+}
+
+.dimensions-form {
+    display: block;
+    overflow: hidden;
+
+    [data-product-option-change] {
+        .form-field:first-child {
+            clip: rect(0 0 0 0); 
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap; 
+            width: 1px;
+        }
+    }
+
+    &.door {
+        [data-product-option-change] {
+            .form-field:nth-child(2) {
+                clip: rect(0 0 0 0); 
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap; 
+                width: 1px;
+            }
+        }
+    }
+
+    .productView-price.mobileview {
+        margin-bottom: 30px;
+    }
+
+    .form-action {
+        padding-left: 0;
+    }
+
+    #form-action-buyNow,
+    [data-tid="instant-bolt-checkout-button"] {
+        display: none !important;
+    }
+
+    #form-action-addToCart {
+        margin-left: 0;
+
+        @include ysw-breakpoint("small") {
+            width: auto;
+        }
+    }
+}
+
+.form-extra.dimensions {
+    .qn-add-to-quote {
+        width: 100%;
+
+        @include ysw-breakpoint("small") {
+            width: auto;
+        }
+    }
+}
+
+.dimensionsRow {
+    display: flex;
+
+    label {
+        font-family: 'Montserrat';
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 12px;
+    }
+
+    .NumberOfPanel {
+        margin-right: 12px;
+        min-width: 70px;
+        width: 70px;
+    
+        .panelsInput {
+            width: auto;
+
+            input {
+                border: 1px solid stencilColor("input-border-color");
+                height: 42px;
+                padding-bottom: 9px;
+                padding-top: 9px;
+                min-width: initial !important;
+            }
+        }
+    }
+
+    .dimensionsRow__width,
+    .dimensionsRow__height {
+        min-width: 55px;
+        width: 55px;
+
+        input {
+            appearance: none;
+            background: #fff;
+            border: 1px solid stencilColor("input-border-color");
+            display: inline-block;
+            font-family: 'Montserrat';
+            font-size: 16px;
+            font-weight: 300;
+            height: 42px;
+            padding: 10px;
+            outline: 0;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .dimensionsRow__x {
+        color: stencilColor("form-label-font-color");
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 500;
+        margin: 27px 6px 0;
+    }
+}

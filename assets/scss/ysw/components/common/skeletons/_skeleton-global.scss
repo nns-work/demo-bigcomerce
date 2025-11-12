@@ -1,0 +1,23 @@
+@keyframes skeleton-loading {
+    0% {
+        background-color: $ysw-color-skeleton;
+        fill: $ysw-color-skeleton;
+    }
+
+    100% {
+        background-color: $ysw-color-skeleton--light;
+        fill: $ysw-color-skeleton--light;
+    }
+}
+
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+    color: transparent !important; // Prevent text from showing up
+    display: block;
+    width: 100%;
+
+    * {
+        color: transparent !important; // Prevent text from showing up
+        visibility: hidden;
+    }
+}

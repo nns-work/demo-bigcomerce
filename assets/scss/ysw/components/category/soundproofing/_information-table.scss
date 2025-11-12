@@ -1,0 +1,140 @@
+.body {
+    .ysw-information-table {
+        padding-inline: remCalc(24px);
+
+        &__container,
+        &__table {
+            max-width: remCalc(970px);
+            padding-inline: 0;
+
+            @include ysw-breakpoint("mobile") {
+                padding-inline: remCalc(15px);
+            }
+        }
+
+        &__heading {
+            color: $ysw-heading-color;
+            font-family: $ysw-headings-font;
+            font-size: remCalc(30px);
+            font-size: remCalc(22px);
+            font-weight: 600;
+            text-align: center;
+
+            @include ysw-breakpoint("b-small") {
+                font-size: remCalc(30px);
+            }
+        }
+
+        &__text {
+            font-weight: 400 !important; // override default font-weight: 400;
+            line-height: remCalc(24px);
+            padding: 0 !important; // override default padding: 0;
+        }
+
+        &__table {
+            display: block;
+
+            th,
+            td {
+                padding-left: 0;
+            }
+
+            tr {
+                &:first-of-type {
+                    td {
+                        padding-top: remCalc(22px);
+                    }
+                }
+
+                &:last-of-type {
+                    td {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+
+            th {
+                font-size: remCalc(16px);
+                padding: remCalc(22px 22px 22px 0);
+
+                @include ysw-breakpoint("medium") {
+                    font-size: remCalc(18px);
+                    padding: remCalc(25px 25px 32px 0);
+                }
+
+                &.rating-table__highlighted-cell {
+                    font-size: remCalc(16px);
+
+                    @include ysw-breakpoint("medium") {
+                        font-size: remCalc(18px);
+                    }
+                }
+            }
+
+            td {
+                padding-block: 0 remCalc(22px);
+                padding-right: remCalc(15px);
+
+                @include ysw-breakpoint("medium") {
+                    padding-right: remCalc(22px);
+                }
+            }
+
+            .rating-table__highlighted-cell {
+                font-family: $ysw-headings-font;
+                font-size: remCalc(14px);
+                padding: remCalc(22px);
+                text-align: center;
+
+                @include ysw-breakpoint("medium") {
+                    font-size: remCalc(18px);
+                    padding: remCalc(25px 25px 32px);
+                }
+
+                &--various {
+                    padding-inline: remCalc(5px);
+
+                    @include ysw-breakpoint("medium") {
+                        padding: remCalc(32px 12px 32px);
+                    }
+                }
+            }
+
+            td h3 {
+                font-size: remCalc(15px);
+                letter-spacing: remCalc(-0.5px);
+                text-align: left;
+            }
+
+            p {
+                color: $ysw-heading-color;
+                font-family: $ysw-body-font;
+                font-size: remCalc(14px);
+                text-align: left;
+
+                @include ysw-breakpoint("medium") {
+                    font-size: remCalc(15px);
+                    line-height: remCalc(24px);
+                }
+            }
+
+            &-note {
+                display: flex;
+                font-size: remCalc(14px) !important; // override default font-size: 14px;
+                font-style: italic;
+                font-weight: 300;
+                margin-top: remCalc(20px);
+                text-align: center;
+            }
+        }
+
+        &__columns {
+            display: flex;
+            margin-top: remCalc(50px);
+
+            @include ysw-breakpoint-down("b-large") {
+                flex-direction: column;
+            }
+        }
+    }
+}

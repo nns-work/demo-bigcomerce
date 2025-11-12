@@ -1,0 +1,200 @@
+// This code is from the client, it was moved to this file to optimize it.
+
+.productView--generic-calculator {
+    .productView-details {
+        margin-bottom: remCalc(30px);
+
+        @include ysw-breakpoint("product-view") {
+            margin-inline: remCalc(20px 0);
+            padding: 0;
+            padding-left: remCalc(14px);
+            width: 47%;
+        }
+    }
+
+    .form-field.form-field--increments {
+        display: none;
+    }
+
+    .NumberOfPanel {
+        margin-bottom: remCalc(15px);
+    }
+
+    .btn-new--primary {
+        background: $ysw-color-new-btn-primary;
+        border-radius: remCalc(4px);
+
+        &:is([disabled], [disabled]:hover) {
+            background: $ysw-color-new-btn-primary--disabled;
+        }
+    }
+
+    .btn-new--big {
+        font-size: remCalc(14px);
+    }
+
+    .form-field[data-product-attribute="set-rectangle"] small {
+        display: none;
+    }
+
+    .buy-buttons #form-action-addToCart,
+    .buy-buttons .add-to-cart {
+        background-color: $ysw-text-link-color;
+
+        &[disabled] {
+            cursor: default;
+            opacity: 0.5;
+        }
+    }
+
+    .buy-buttons #form-action-addToCart:hover {
+        background: $ysw-color-generic-calculation-add-to-cart-hover;
+
+        &[disabled] {
+            background-color: $ysw-text-link-color;
+        }
+    }
+
+    .btn-new--primary:hover {
+        background-color: $ysw-text-link-color;
+    }
+
+    .changePanelNumbers {
+        background: $ysw-white-color;
+        bottom: remCalc(1px);
+        padding: remCalc(8px 8px 0 5px);
+        position: absolute;
+        right: remCalc(1px);
+        top: remCalc(1px);
+        width: remCalc(30px);
+    }
+
+    .form-radio:checked + .form-option {
+        background: $ysw-color-generic-calculation-option-background;
+        border: 0.1rem solid $ysw-text-link-color;
+        box-shadow: 0 0 0 remCalc(1px) $ysw-text-link-color;
+    }
+
+    .form-option-variant {
+        font-family: $ysw-open-sans-font;
+        font-size: remCalc(14px);
+        font-weight: 600;
+        padding: remCalc(5px 15px);
+    }
+
+    .form-option {
+        border-radius: remCalc(2px);
+    }
+
+    .productView-price span {
+        color: $ysw-timberwool-sample-modal-title-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(26px);
+        font-weight: 700;
+        position: relative;
+    }
+
+    .productView-price {
+        display: inline-block;
+        margin: 0 0 0 remCalc(5px);
+        text-align: left;
+        vertical-align: middle;
+        width: calc(100% - #{remCalc(320px)});
+    }
+
+    .productView-product h1 {
+        color: $ysw-timberwool-sample-modal-title-color;
+        font-family: $ysw-headings-font;
+        font-size: remCalc(24px);
+        font-weight: 700;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    .productView-price.mobileview {
+        display: none;
+    }
+
+    .productView-images {
+        @include ysw-breakpoint-down("600") {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+    }
+
+    .productView-price {
+        @include ysw-breakpoint-down("600") {
+            display: none;
+        }
+    }
+
+    .productView-price.mobileview {
+        @include ysw-breakpoint-down("600") {
+            display: block;
+        }
+    }
+
+    .numberOfPanels {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+
+        label {
+            width: 100%;
+        }
+
+        > div {
+            align-items: center;
+            display: flex;
+            gap: remCalc(15px);
+
+            @include ysw-breakpoint-down("handheld") {
+                flex-wrap: wrap;
+            }
+        }
+
+        #numberOfPanels {
+            @include ysw-breakpoint("product-view") {
+                min-width: remCalc(130px);
+            }
+        }
+
+        &__wrapper {
+            column-gap: remCalc(15px);
+            display: flex;
+            flex-wrap: wrap;
+
+            @include ysw-breakpoint-down("handheld") {
+                flex-direction: column;
+            }
+        }
+
+        .coversSF {
+            margin: 0;
+        }
+
+        .saveDiscount {
+            margin: 0;
+
+            @include ysw-breakpoint-down("handheld") {
+                position: inherit;
+            }
+        }
+    }
+
+    .productView-sample {
+        border-block: remCalc(1px) solid $ysw-color-price-table-gray--medium;
+        padding-block: remCalc(15px);
+
+        a {
+            color: $ysw-text-link-color;
+            font-family: $ysw-open-sans-font;
+            font-size: remCalc(14px);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,269 @@
+.ysw-l-product-vehicle-kits {
+    .productView {
+        &-product,
+        &-belowReview,
+        &-options {
+            @include ysw-breakpoint-down("b-medium") {
+                width: 100% !important; // override the width set by the theme
+            }
+        }
+
+        h1 {
+            line-height: 1.2;
+            margin-top: remCalc(10px);
+        }
+
+        &-ads {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: remCalc(20px);
+            text-transform: uppercase;
+
+            span {
+                background-color: $button--primary-backgroundColor;
+                color: $ysw-white-color;
+                display: block;
+                font-family: $ysw-headings-font;
+                padding-left: remCalc(4px);
+            }
+        }
+
+        &-bundle {
+            img {
+                user-select: none;
+                width: remCalc(140px);
+            }
+        }
+
+        &-free {
+            img {
+                user-select: none;
+                width: remCalc(115px);
+            }
+        }
+
+        &-product {
+            border-bottom: remCalc(1px) solid $ysw-color-header-border;
+            padding-bottom: remCalc(15px);
+            width: 90%;
+        }
+
+        &-belowReview {
+            border-bottom: remCalc(1px) solid $ysw-color-header-border;
+            line-height: 1.2;
+            padding-top: remCalc(15px);
+            width: 90%;
+
+            p {
+                color: $button--primary-backgroundColor;
+                font-size: remCalc(15px);
+                font-weight: 600;
+            }
+        }
+
+        &-options {
+            border-bottom: remCalc(1px) solid $ysw-color-header-border;
+            padding-bottom: remCalc(20px);
+            width: 90%;
+
+            input:checked+label {
+                color: $button--primary-backgroundColor;
+                font-weight: 400;
+
+                &::after {
+                    background-color: $button--primary-backgroundColor;
+                }
+            }
+        }
+
+        &-package {
+            border-top: remCalc(1px) solid $ysw-color-header-border;
+            margin-bottom: remCalc(30px);
+            width: 100%;
+
+            div:last-child {
+                border-bottom: 0;
+            }
+
+            &-title {
+                border-bottom: remCalc(1px) solid $ysw-color-header-border;
+
+                h3 {
+                    color: $button--primary-backgroundColor;
+                    font-weight: 800;
+                    margin-block: remCalc(5px);
+                    text-transform: capitalize;
+                }
+            }
+
+            &-wrapper {
+                border-bottom: remCalc(1px) solid $ysw-color-header-border;
+                display: flex;
+                gap: remCalc(10px);
+                margin-block: remCalc(10px 0);
+
+                .icon {
+                    fill: $button--primary-backgroundColor;
+                    margin-top: remCalc(5px);
+                    min-height: remCalc(20px);
+                    min-width: remCalc(20px);
+                }
+            }
+
+            &-item {
+                h4 {
+                    color: $button--primary-backgroundColor;
+                    font-weight: 700;
+                    margin: 0;
+                }
+
+                p {
+                    font-size: remCalc(17px);
+                    line-height: 1;
+                    margin-bottom: remCalc(5px);
+                }
+            }
+        }
+
+        .sidebarbox {
+            background-color: $ysw-white-color;
+            border: remCalc(6px) solid $ysw-grey-color--lightest;
+            border-radius: remCalc(15px);
+            box-shadow: none;
+            padding: remCalc(20px 15px);
+
+            @include ysw-breakpoint("b-medium") {
+                width: remCalc(280px);
+            }
+
+            .productView-price {
+                display: flex;
+                justify-content: space-between;
+
+                .inStock {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    img {
+                        margin-top: remCalc(5px);
+                        max-height: remCalc(32px);
+                        max-width: remCalc(100px);
+                        min-height: remCalc(32px);
+                        min-width: remCalc(100px);
+                        user-select: none;
+                    }
+                }
+            }
+
+            .price-section {
+                span {
+                    color: $button--primary-backgroundColor;
+                    font-family: $ysw-body-font;
+                    font-size: remCalc(28px);
+                    font-weight: 900;
+                }
+
+                &.showComparison .show {
+                    color: $ysw-text-base-color;
+                }
+            }
+
+            .productView-info-value {
+                border-bottom: remCalc(1px) solid $ysw-color-header-border;
+                display: block;
+                float: none;
+                font-size: remCalc(14px);
+                margin-bottom: remCalc(15px);
+                padding-bottom: remCalc(10px);
+            }
+
+            .form-field {
+                &--increments {
+                    align-items: flex-start;
+                    border: 0 !important; // override the border set by the theme
+                    display: flex;
+                    flex-direction: column;
+                    font-size: remCalc(16px);
+                    padding: 0;
+                    position: relative;
+                    width: remCalc(205px);
+
+                    @include ysw-breakpoint("b-medium") {
+                        width: 100%;
+                    }
+                }
+
+                .form-label {
+                    margin-bottom: remCalc(10px);
+                    text-transform: uppercase;
+                }
+
+                .form-increment {
+                    border: remCalc(4px) solid $ysw-color-form-increment;
+                    position: relative;
+                    width: 100%;
+                }
+
+                .form-input--incrementTotal {
+                    height: remCalc(40px);
+                    padding-inline: remCalc(10px 25px);
+                    text-align: left;
+                    width: 100%;
+                }
+
+                .button {
+                    .icon {
+                        svg {
+                            fill: $button--primary-backgroundColor !important; // override the fill set by the theme
+                            stroke: $button--primary-backgroundColor !important; // override the stroke set by the theme
+                            stroke-width: remCalc(1px);
+                        }
+                    }
+                }
+            }
+
+            .buy-buttons .btn-new--big {
+                background-color: $button--primary-backgroundColor;
+                border-radius: 0;
+            }
+
+            .buy-buttons #form-action-addToCart {
+                background-color: $footer-background !important; // override the background-color set by the theme
+            }
+
+            .form-input {
+                &-quantity-label {
+                    margin-bottom: remCalc(10px) !important; // override the margin-bottom set by the theme
+                    text-transform: uppercase;
+                }
+            }
+
+            button.button.button--icon[data-action="inc"] {
+                background: 0 0;
+                border: 0;
+                height: 50%;
+                padding: 0;
+                position: absolute;
+                right: (-(remCalc(1px)));
+                top: remCalc(3px) !important; // override the top set by the theme
+            }
+
+            button.button.button--icon[data-action="dec"] {
+                background: 0 0;
+                border: 0;
+                bottom: remCalc(3px) !important;
+                height: 50%;
+                padding: 0;
+                position: absolute;
+                right: (-(remCalc(1px)));
+            }
+
+            .buy-buttons {
+                @include ysw-breakpoint-down("b-medium") {
+                    float: none;
+                }
+            }
+        }
+    }
+}

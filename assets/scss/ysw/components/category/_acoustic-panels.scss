@@ -1,0 +1,32 @@
+.flex-items__picture {
+    @include ysw-breakpoint-down("c-large") {
+        visibility: hidden;
+    }
+}
+
+.home-products-pages {
+    .sound-solution {
+        .acoustics,
+        .soundproofing {
+            align-items: center;
+            display: flex !important; // Override the display: block;
+            justify-content: center;
+            line-height: normal !important; // Override the line-height: 286px;
+            min-height: remCalc(406px);
+
+            @include ysw-breakpoint("b-large") {
+                min-height: remCalc(286px);
+                min-width: remCalc(260px);
+            }
+
+            span {
+                min-width: remCalc(235px);
+
+                @include ysw-breakpoint("c-small") {
+                    display: block;
+                    min-width: remCalc(260px);
+                }
+            }
+        }
+    }
+}

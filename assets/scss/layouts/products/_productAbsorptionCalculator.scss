@@ -1,0 +1,328 @@
+// Product Absorption Calculator
+
+.absorption-calculator {
+  color: #39474f;
+  margin-bottom: 60px;
+  margin-top: 24px;
+
+  @include breakpoint("small") {
+    margin-top: 30px;
+  }
+
+  [data-widget-id] & {
+    margin-top: 0;
+  }
+}
+
+.absorption-calculator__header {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @include breakpoint("small") {
+    padding-top: 42px;
+    margin-bottom: 36px;
+  }
+}
+
+.absorption-calculator__title {
+  color: #2f77b8;
+  font-family: $fontFamily-montserrat;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin: 0 0 6px;
+  text-transform: none;
+
+  @include breakpoint("small") {
+    font-size: 36px;
+  }
+}
+
+.absorption-calculator__subtitle {
+  font-family: $fontFamily-montserrat;
+  font-size: 12px;
+
+  @include breakpoint("small") {
+    font-size: 16px;
+  }
+  
+  a {
+    color: #2f77b8;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
+}
+
+.absorption-calculator__row {
+  width: 100%;
+
+  @include breakpoint("small") {
+    align-items: flex-start;
+    display: flex;
+    gap: 0 20px;
+  }
+
+  &.no-space {
+    gap: 0;
+  }
+}
+
+.absorption-calculator__form-section-title {
+  color: #505050;
+  font-family: $fontFamily-montserrat;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 0 18px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include breakpoint("small") {
+    font-size: 14px;
+  }
+}
+
+.absorption-calculator__form-input-wrapper {
+  flex: 1;
+  margin-bottom: 30px;
+  position: relative;
+
+  .no-space & {
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint("small") {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.absorption-calculator__form-input {
+  position: relative;
+}
+
+.absorption-calculator__form-input-description {
+  [data-time-description] {
+    display: none;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 12px 0 0;
+  }
+}
+
+.absorption-calculator__form {
+  input,
+  select {
+    appearance: none;
+    background: #fff;
+    border: 1px solid #39474f;
+    border-radius: 5px;
+    color: inherit;
+    display: block;
+    font-family: $fontFamily-helvetica;
+    font-size: 12px;
+    height: 48px;
+    letter-spacing: 0;
+    line-height: 1.2;
+    padding: 0 10px;
+    position: relative;
+    width: 100%;
+
+    @include breakpoint("small") {
+      font-size: 14px;
+      padding: 0 15px;
+    }
+
+    @include breakpoint("medium") {
+      padding: 0 20px;
+    }
+
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: #39474f;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #39474f;
+    }
+
+    &::placeholder {
+      color: #39474f;
+    }
+
+    &[disabled],
+    &:disabled {
+      background-color: #fbfbfb;
+      border-color: #dfdfdf;
+      color: inherit;
+      opacity: 0.8;
+    }
+
+    + label {
+      background: transparent;
+      bottom: calc(100% - 6px);
+      color: inherit;
+      font-family: $fontFamily-helvetica;
+      font-size: 10px;
+      left: 13px;
+      line-height: normal;
+      margin: 0;
+      opacity: 0;
+      padding: 0 3px;
+      pointer-events: none;
+      position: absolute;
+      transform: translateY(3px);
+      transition: all 0.1s ease-in-out;
+
+      @include breakpoint("small") {
+        bottom: calc(100% - 7px);
+        font-size: 12px;
+      }
+    }
+  }
+
+  select.js-is-selected,
+  input:not(:placeholder-shown),
+  input:-webkit-autofill {
+    ~ label {
+      background: #fff;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  select {
+    background-image: url('https://www.secondskinaudio.com/content/damplifier-pro/down-arrow.png');
+    background-position: right 20px center;
+    background-repeat: no-repeat;
+  }
+}
+
+.absorption-calculator__result {
+  align-items: center;
+  background-color: #f5f5f5;
+  display: flex;
+  font-family: $fontFamily-montserrat;
+  font-weight: bold;
+  padding: 15px;
+
+  @include breakpoint("small") {
+    padding: 24px;
+  }
+
+  @include breakpoint("large") {
+    padding: 42px;
+  }
+}
+
+.absorption-calculator__result-image-wrapper {
+  align-self: flex-start;
+  background-color: #fff;
+  display: block;
+  min-width: 80px;
+  width: 80px;
+
+  @include breakpoint("small") {
+    min-width: 200px;
+    width: 200px;
+  }
+}
+
+.absorption-calculator__result-content {
+  margin-left: 12px;
+
+  @include breakpoint("small") {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+}
+
+.absorption-calculator__result-time {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0 0 8px;
+
+  @include breakpoint("small") {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .emphasis {
+    color: #2f77b8;
+  }
+}
+
+.absorption-calculator__result-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: none;
+
+  @include breakpoint("small") {
+    font-size: 24px;
+  }
+
+  @include breakpoint("medium") {
+    font-size: 30px;
+  }
+
+  .emphasis {
+    color: #2f77b8;
+  }
+}
+
+.absorption-calculator__result-subtitle {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 12px 0 0;
+
+  @include breakpoint("small") {
+    font-size: 22px;
+  }
+
+  a {
+    color: #2f77b8;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
+}
+
+.absorption-calculator__result-button {
+  margin: 18px 0 0;
+
+  .btn-new {
+    background-color: #39474f;
+    border-color: #39474f;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #2f77b8;
+      border-color: #2f77b8;
+    }
+  }
+}
