@@ -22047,7 +22047,7 @@ body.pace-running {
 
 .header-top {
   text-transform: uppercase;
-  background-image: url(/assets/img/header-bg.webp);
+  background-image: url(./assets/img/header-bg.webp);
   background-position-x: right;
   background-size: cover;
   display: -webkit-box;
@@ -25584,7 +25584,7 @@ body.pace-running {
               flex: 1 1 100%; } }
 
 .banner-home {
-  background-image: url("/assets/img/banner-home.png");
+  background-image: url("./assets/img/banner-home.png");
   height: 540px;
   padding-bottom: 40px; }
   .banner-home .container {
