@@ -22055,7 +22055,7 @@ body.pace-running {
 
 .header-top {
   text-transform: uppercase;
-  background-image: url(/assets/img/header-bg.webp);
+  background-image: url('./assets/img/header-bg.webp');
   background-position-x: right;
   background-size: cover;
   display: -webkit-box;
@@ -25703,12 +25703,12 @@ body.pace-running {
   padding: 10px !important; }
 
 .banner-home {
-  background-image: url("/assets/img/banner-home.png");
+  background-image: url("./assets/img/banner-home.png");
   height: 540px;
   padding-bottom: 40px; }
   @media (max-width: 700px) {
     .banner-home {
-      background-image: url("/assets/img/banner-home-m.png");
+      background-image: url("./assets/img/banner-home-m.png");
       background-size: cover; } }
   @media (max-width: 700px) {
     .banner-home {
