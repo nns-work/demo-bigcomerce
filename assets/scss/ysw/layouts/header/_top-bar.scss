@@ -2,6 +2,9 @@
 .d-mobile {
     display: none !important;
 }
+.d-mobile-block {
+    display: none !important;
+}
 .d-block {
     display: block !important;
 }
@@ -12,6 +15,9 @@
         display: none !important;
     }
     .d-mobile {
+        display: flex !important;
+    }
+    .d-mobile-block {
         display: block !important;
     }
 }
