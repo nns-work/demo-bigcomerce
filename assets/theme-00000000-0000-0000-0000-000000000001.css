@@ -22047,7 +22047,7 @@ body.pace-running {
 
 .header-top {
   text-transform: uppercase;
-  background-image: url(/img/header-bg.webp);
+  background-image: url('../img/header-bg.webp');
   background-position-x: right;
   background-size: cover;
   display: -webkit-box;
