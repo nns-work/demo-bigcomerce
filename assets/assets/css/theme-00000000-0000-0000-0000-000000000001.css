@@ -22012,10 +22012,6 @@ body.pace-running {
 .d-block {
   display: block !important; }
 
-.d-mobile-block {
-    display: none !important;
-}
-
 /* Mobile (показываем mobile header) */
 @media (max-width: 1024px) {
   .d-desktop {
