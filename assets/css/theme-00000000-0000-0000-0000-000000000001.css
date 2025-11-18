@@ -24943,7 +24943,7 @@ body.pace-running {
     .sidebar-reviews {
       display: none; } }
   .sidebar-reviews .review-shape {
-    background-image: url("./assets/img/review-shape.webp");
+    background-image: url("../img/review-shape.webp");
     display: block;
     width: 36px;
     height: 36px;
@@ -25192,7 +25192,7 @@ body.pace-running {
                 align-items: center;
         width: 100%; }
         .block-3 .slider .card .rating .star {
-          background-image: url("./assets/img/main/star.svg");
+          background-image: url("../img/main/star.svg");
           width: 16px;
           aspect-ratio: 1; }
         .block-3 .slider .card .rating .numeric-review {
@@ -25770,7 +25770,7 @@ body.pace-running {
   background-color: #f5f5f6 !important; }
 
 .banner-home {
-  background-image: url("./assets/img/banner-home.png");
+  background-image: url("../img/banner-home.png");
   position: relative;
   height: 540px;
   padding-bottom: 40px; }
@@ -25781,7 +25781,7 @@ body.pace-running {
     right: 10%; }
   @media (max-width: 700px) {
     .banner-home {
-      background-image: url("./assets/img/banner-home-m.png");
+      background-image: url("../img/banner-home-m.png");
       background-size: cover; }
       .banner-home .uu {
         position: absolute;
