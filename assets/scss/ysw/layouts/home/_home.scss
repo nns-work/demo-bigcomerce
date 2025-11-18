@@ -1,6 +1,5 @@
 .main {
     &.content-cast {
-        margin-top: 75px;
         @media screen and (max-width: 1024px) {
             margin-top: 0;
         }
@@ -61,6 +60,10 @@
         margin: 0;
         text-transform: none;
     }
+}
+
+.mt-75 {
+    margin-top: 75px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1115,13 +1118,28 @@
 
 #search_query_adv {
     padding: 10px !important;
+    background-color: #f5f5f6 !important;
 }
 
 .banner-home {
     background-image: url("/assets/img/banner-home.png");
+    position: relative;
+    .uu {
+        position: absolute;
+        bottom: 5%;
+        width: 180px;
+        right: 10%;
+    }
     @media (max-width: 700px) {
         background-image: url("/assets/img/banner-home-m.png");
         background-size: cover;
+        .uu {
+            position: absolute;
+            bottom: 5%;
+            width: 100px;
+            right: 5%;
+            top: 6%;
+        }
     }
     height: 540px;
     padding-bottom: 40px;
@@ -1389,5 +1407,33 @@
 @media (max-width: 600px) {
     .libCard {
         width: 80%;
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #28343a;
+    font-weight: normal;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    a {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .bullet {
+        display: flex;
+    }
+    @media (max-width: 700px) {
+        font-size: 14px;
+        line-height: 14px;
+        a {
+            font-size: 14px;
+            line-height: 14px;
+        }
     }
 }
